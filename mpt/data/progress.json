@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-04T09:00:30Z",
+ "generated_at": "2026-10-04T10:37:02Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T09:00:22Z",
+   "collected_at": "2026-10-04T10:36:51Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T09:00:22Z",
+   "collected_at": "2026-10-04T10:36:51Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T09:00:22Z",
+   "collected_at": "2026-10-04T10:36:51Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T09:00:22Z",
+   "collected_at": "2026-10-04T10:36:51Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T09:00:22Z",
+   "collected_at": "2026-10-04T10:36:51Z",
    "submitted": 2
   },
   {
@@ -49,7 +49,7 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T09:00:22Z",
+   "collected_at": "2026-10-04T10:36:51Z",
    "submitted": 1
   }
  ],
@@ -129,7 +129,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-vladimir212455/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-vladimir212455/releases/tag/submit%2F2026-09-25T13-06-19Z-473c677"
   },
@@ -138,7 +138,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-Semex37/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-semex37/releases/tag/submit%2F2026-09-26T16-04-49Z-a681029"
   },
@@ -147,7 +147,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-semka39/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-semka39/releases/tag/submit%2F2026-09-30T13-48-35Z-2d074ef"
   },
@@ -156,7 +156,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-catinhat01/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-catinhat01/releases/tag/submit%2F2026-10-01T14-45-37Z-7cc083f"
   },
@@ -165,7 +165,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-dominik-DeKoko/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-dominik-dekoko/releases/tag/submit%2F2026-09-30T16-55-23Z-56d1e7e"
   },
@@ -174,7 +174,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-reznya213/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-reznya213/releases/tag/submit%2F2026-10-02T15-09-35Z-a9f77fc"
   },
@@ -183,7 +183,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-Lavandamosh/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-lavandamosh/releases/tag/submit%2F2026-10-01T13-39-59Z-ade0d3a"
   },
@@ -192,7 +192,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-KycokXleba/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-kycokxleba/releases/tag/submit%2F2026-10-01T18-00-55Z-cd05e4d"
   },
@@ -201,7 +201,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-grommoott/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-grommoott/releases/tag/submit%2F2026-10-01T20-15-19Z-2648fb1"
   },
@@ -210,7 +210,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-Liondwap/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-liondwap/releases/tag/submit%2F2026-10-01T14-53-35Z-23f20e0"
   },
@@ -219,7 +219,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-vebeta/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-vebeta/releases/tag/submit%2F2026-10-02T12-48-09Z-aee0886"
   },
@@ -228,7 +228,7 @@
    "assignment": "bash-basics",
    "score": 8,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-Aokdi/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-aokdi/releases/tag/submit%2F2026-10-02T15-00-47Z-bf60c32"
   },
@@ -237,7 +237,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-vikxxie/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-vikxxie/releases/tag/submit%2F2026-10-02T13-51-01Z-e83a8b4"
   },
@@ -246,7 +246,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-mrygrz8/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-mrygrz8/releases/tag/submit%2F2026-10-02T14-40-40Z-4c7ba55"
   },
@@ -255,7 +255,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-Bimbusick/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-bimbusick/releases/tag/submit%2F2026-10-02T15-16-09Z-2740a6b"
   },
@@ -264,7 +264,7 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-The-Durian-art/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-the-durian-art/releases/tag/submit%2F2026-10-02T14-47-01Z-d5efd2e"
   },
@@ -273,7 +273,7 @@
    "assignment": "bash-basics",
    "score": 0,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-FunnyGlupik/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-funnyglupik/releases/tag/submit%2F2026-10-02T16-49-39Z-0464c87"
   },
