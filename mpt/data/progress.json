@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-04T10:37:02Z",
+ "generated_at": "2026-10-04T20:59:01Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T10:36:51Z",
+   "collected_at": "2026-10-04T20:58:47Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T10:36:51Z",
+   "collected_at": "2026-10-04T20:58:47Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T10:36:51Z",
+   "collected_at": "2026-10-04T20:58:47Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T10:36:51Z",
+   "collected_at": "2026-10-04T20:58:47Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T10:36:51Z",
+   "collected_at": "2026-10-04T20:58:47Z",
    "submitted": 2
   },
   {
@@ -49,7 +49,7 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T10:36:51Z",
+   "collected_at": "2026-10-04T20:58:47Z",
    "submitted": 1
   }
  ],
@@ -183,9 +183,9 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
-   "review": "changes_requested",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-Lavandamosh/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-lavandamosh/releases/tag/submit%2F2026-10-01T13-39-59Z-ade0d3a"
+   "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-lavandamosh/releases/tag/submit%2F2026-10-04T10-52-32Z-1f33dcf"
   },
   {
    "student": "KycokXleba",
