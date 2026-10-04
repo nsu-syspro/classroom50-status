@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-03T21:06:28Z",
+ "generated_at": "2026-10-04T09:00:30Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-03T21:06:18Z",
+   "collected_at": "2026-10-04T09:00:22Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-03T21:06:18Z",
+   "collected_at": "2026-10-04T09:00:22Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-03T21:06:18Z",
+   "collected_at": "2026-10-04T09:00:22Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-03T21:06:18Z",
+   "collected_at": "2026-10-04T09:00:22Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-03T21:06:18Z",
+   "collected_at": "2026-10-04T09:00:22Z",
    "submitted": 2
   },
   {
@@ -49,7 +49,7 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-03T21:06:18Z",
+   "collected_at": "2026-10-04T09:00:22Z",
    "submitted": 1
   }
  ],
@@ -435,7 +435,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-KycokXleba/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-kycokxleba/releases/tag/submit%2F2026-09-24T18-39-07Z-99f8760"
   },
@@ -444,7 +444,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-semka39/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-semka39/releases/tag/submit%2F2026-09-24T14-46-42Z-0351a93"
   },
@@ -453,7 +453,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-grommoott/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-grommoott/releases/tag/submit%2F2026-09-23T07-37-58Z-cb554b3"
   },
@@ -462,7 +462,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vladimir212455/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vladimir212455/releases/tag/submit%2F2026-09-21T07-41-25Z-af2d7e1"
   },
@@ -471,7 +471,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-Liondwap/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-liondwap/releases/tag/submit%2F2026-09-23T14-49-14Z-34d8231"
   },
@@ -480,7 +480,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vebeta/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vebeta/releases/tag/submit%2F2026-09-25T17-28-27Z-de8498d"
   },
@@ -489,7 +489,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-mrygrz8/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-mrygrz8/releases/tag/submit%2F2026-09-24T12-47-23Z-e59a785"
   },
@@ -498,7 +498,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-reznya213/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-reznya213/releases/tag/submit%2F2026-09-24T10-15-35Z-37c8833"
   },
@@ -507,7 +507,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-Semex37/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-semex37/releases/tag/submit%2F2026-09-24T14-59-44Z-0aa7314"
   },
@@ -516,7 +516,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-catinhat01/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-catinhat01/releases/tag/submit%2F2026-09-24T08-43-26Z-998ad40"
   },
@@ -525,7 +525,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-Lavandamosh/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-lavandamosh/releases/tag/submit%2F2026-09-24T14-04-40Z-15a3878"
   },
@@ -534,7 +534,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-The-Durian-art/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-the-durian-art/releases/tag/submit%2F2026-09-25T16-17-24Z-ad5fc60"
   },
@@ -543,7 +543,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vikxxie/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vikxxie/releases/tag/submit%2F2026-09-25T13-40-37Z-b96e637"
   },
@@ -552,7 +552,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-Bimbusick/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-bimbusick/releases/tag/submit%2F2026-09-25T15-25-57Z-4217958"
   },
@@ -561,7 +561,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-Aokdi/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-aokdi/releases/tag/submit%2F2026-09-25T16-25-34Z-6df3f86"
   },
@@ -570,7 +570,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-dominik-DeKoko/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-dominik-dekoko/releases/tag/submit%2F2026-09-25T14-11-01Z-85ba116"
   },
@@ -579,7 +579,7 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-FunnyGlupik/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-funnyglupik/releases/tag/submit%2F2026-09-25T15-46-30Z-29396ad"
   },
