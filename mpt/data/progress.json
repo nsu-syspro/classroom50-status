@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-04T20:59:01Z",
+ "generated_at": "2026-10-07T20:20:38Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T20:58:47Z",
+   "collected_at": "2026-10-07T20:20:23Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T20:58:47Z",
+   "collected_at": "2026-10-07T20:20:23Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T20:58:47Z",
+   "collected_at": "2026-10-07T20:20:23Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T20:58:47Z",
+   "collected_at": "2026-10-07T20:20:23Z",
    "submitted": 17
   },
   {
@@ -41,15 +41,15 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T20:58:47Z",
-   "submitted": 2
+   "collected_at": "2026-10-07T20:20:23Z",
+   "submitted": 4
   },
   {
    "slug": "markup-basics",
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-04T20:58:47Z",
+   "collected_at": "2026-10-07T20:20:23Z",
    "submitted": 1
   }
  ],
@@ -591,6 +591,24 @@
    "review": "unreviewed",
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-vladimir212455/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-git-basics-vladimir212455/releases/tag/submit%2F2026-10-03T01-36-57Z-b23d1be"
+  },
+  {
+   "student": "Semex37",
+   "assignment": "git-basics",
+   "score": 6,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Semex37/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-semex37/releases/tag/submit%2F2026-10-07T08-14-46Z-d199d3c"
+  },
+  {
+   "student": "dominik-DeKoko",
+   "assignment": "git-basics",
+   "score": 3,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-dominik-DeKoko/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-dominik-dekoko/releases/tag/submit%2F2026-10-07T08-30-25Z-7a0ed94"
   },
   {
    "student": "vladimir212455",
