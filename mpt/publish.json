@@ -1,11 +1,18 @@
 {
   "$schema": "../schemas/publish.schema.json",
   "enabled": true,
-  "mode": "past-due",
-  "assignments": [],
+  "mode": "explicit",
+  "assignments": [
+    "command-line-basics",
+    "regex-basics",
+    "encoding-basics",
+    "bash-basics",
+    "git-basics",
+    "automation-basics",
+    "markup-basics"
+  ],
   "exclude_students": [
     "aleksiwithlove",
     "liontiger23"
-  ],
-  "show_early": true
+  ]
 }
