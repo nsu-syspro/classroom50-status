@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-09T02:24:13Z",
+ "generated_at": "2026-10-09T20:19:38Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-09T02:23:56Z",
+   "collected_at": "2026-10-09T20:19:29Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-09T02:23:56Z",
+   "collected_at": "2026-10-09T20:19:29Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-09T02:23:56Z",
+   "collected_at": "2026-10-09T20:19:29Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-09T02:23:56Z",
+   "collected_at": "2026-10-09T20:19:29Z",
    "submitted": 17
   },
   {
@@ -41,23 +41,23 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-09T02:23:56Z",
-   "submitted": 9
+   "collected_at": "2026-10-09T20:19:29Z",
+   "submitted": 18
   },
   {
    "slug": "automation-basics",
    "name": "Automation basics",
    "due": "2026-10-16T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-09T02:23:56Z",
-   "submitted": 0
+   "collected_at": "2026-10-09T20:19:29Z",
+   "submitted": 1
   },
   {
    "slug": "markup-basics",
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-09T02:23:56Z",
+   "collected_at": "2026-10-09T20:19:29Z",
    "submitted": 1
   }
  ],
@@ -132,6 +132,15 @@
   }
  ],
  "cells": [
+  {
+   "student": "vladimir212455",
+   "assignment": "automation-basics",
+   "score": 10,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-vladimir212455/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-vladimir212455/releases/tag/submit%2F2026-10-09T14-40-14Z-b256ee8"
+  },
   {
    "student": "vladimir212455",
    "assignment": "bash-basics",
@@ -607,16 +616,16 @@
    "max_score": 10,
    "review": "unreviewed",
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Semex37/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-semex37/releases/tag/submit%2F2026-10-07T08-14-46Z-d199d3c"
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-semex37/releases/tag/submit%2F2026-10-09T16-03-29Z-3d4aea4"
   },
   {
    "student": "dominik-DeKoko",
    "assignment": "git-basics",
-   "score": 3,
+   "score": 10,
    "max_score": 10,
    "review": "unreviewed",
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-dominik-DeKoko/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-dominik-dekoko/releases/tag/submit%2F2026-10-07T08-30-25Z-7a0ed94"
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-dominik-dekoko/releases/tag/submit%2F2026-10-09T15-07-14Z-32d9431"
   },
   {
    "student": "grommoott",
@@ -630,11 +639,11 @@
   {
    "student": "Liondwap",
    "assignment": "git-basics",
-   "score": 6,
+   "score": 10,
    "max_score": 10,
    "review": "unreviewed",
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Liondwap/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-liondwap/releases/tag/submit%2F2026-10-08T14-44-10Z-1a22882"
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-liondwap/releases/tag/submit%2F2026-10-09T15-13-11Z-bbeadd0"
   },
   {
    "student": "The-Durian-art",
@@ -643,7 +652,7 @@
    "max_score": 10,
    "review": "unreviewed",
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-The-Durian-art/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-the-durian-art/releases/tag/submit%2F2026-10-08T15-05-43Z-a5152ce"
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-the-durian-art/releases/tag/submit%2F2026-10-09T15-46-00Z-b68b6ee"
   },
   {
    "student": "vikxxie",
@@ -657,11 +666,92 @@
   {
    "student": "mrygrz8",
    "assignment": "git-basics",
-   "score": 3,
+   "score": 10,
    "max_score": 10,
    "review": "unreviewed",
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-mrygrz8/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-mrygrz8/releases/tag/submit%2F2026-10-08T14-50-44Z-ddbcb76"
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-mrygrz8/releases/tag/submit%2F2026-10-09T05-02-28Z-84afb84"
+  },
+  {
+   "student": "KycokXleba",
+   "assignment": "git-basics",
+   "score": 10,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-KycokXleba/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-kycokxleba/releases/tag/submit%2F2026-10-09T15-05-17Z-c8d5ab0"
+  },
+  {
+   "student": "semka39",
+   "assignment": "git-basics",
+   "score": 10,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-semka39/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-semka39/releases/tag/submit%2F2026-10-09T17-05-23Z-b79c880"
+  },
+  {
+   "student": "Bimbusick",
+   "assignment": "git-basics",
+   "score": 10,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Bimbusick/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-bimbusick/releases/tag/submit%2F2026-10-09T14-40-27Z-2ade0ee"
+  },
+  {
+   "student": "vebeta",
+   "assignment": "git-basics",
+   "score": 0,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-vebeta/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-vebeta/releases/tag/submit%2F2026-10-09T11-59-52Z-7a862ed"
+  },
+  {
+   "student": "Aokdi",
+   "assignment": "git-basics",
+   "score": 6,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Aokdi/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-aokdi/releases/tag/submit%2F2026-10-09T13-29-19Z-57b0f65"
+  },
+  {
+   "student": "reznya213",
+   "assignment": "git-basics",
+   "score": 3,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-reznya213/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-reznya213/releases/tag/submit%2F2026-10-09T16-16-40Z-6b9b886"
+  },
+  {
+   "student": "catinhat01",
+   "assignment": "git-basics",
+   "score": 10,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-catinhat01/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-catinhat01/releases/tag/submit%2F2026-10-09T11-41-55Z-39e920e"
+  },
+  {
+   "student": "FunnyGlupik",
+   "assignment": "git-basics",
+   "score": 10,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-FunnyGlupik/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-funnyglupik/releases/tag/submit%2F2026-10-09T17-01-41Z-4c55b39"
+  },
+  {
+   "student": "Lavandamosh",
+   "assignment": "git-basics",
+   "score": 10,
+   "max_score": 10,
+   "review": "unreviewed",
+   "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Lavandamosh/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-lavandamosh/releases/tag/submit%2F2026-10-09T16-15-12Z-ec33d40"
   },
   {
    "student": "vladimir212455",
