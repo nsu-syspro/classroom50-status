@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-17T09:33:49Z",
+ "generated_at": "2026-10-17T11:06:42Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-17T09:33:44Z",
+   "collected_at": "2026-10-17T11:06:25Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-17T09:33:44Z",
+   "collected_at": "2026-10-17T11:06:25Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-17T09:33:44Z",
+   "collected_at": "2026-10-17T11:06:25Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-17T09:33:44Z",
+   "collected_at": "2026-10-17T11:06:25Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-17T09:33:44Z",
+   "collected_at": "2026-10-17T11:06:25Z",
    "submitted": 19
   },
   {
@@ -49,7 +49,7 @@
    "name": "Automation basics",
    "due": "2026-10-16T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-17T09:33:44Z",
+   "collected_at": "2026-10-17T11:06:25Z",
    "submitted": 16
   },
   {
@@ -57,7 +57,7 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-17T09:33:44Z",
+   "collected_at": "2026-10-17T11:06:25Z",
    "submitted": 1
   }
  ],
@@ -137,7 +137,7 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-vladimir212455/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-vladimir212455/releases/tag/submit%2F2026-10-17T04-04-40Z-c4555ff"
   },
@@ -146,7 +146,7 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-grommoott/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-grommoott/releases/tag/submit%2F2026-10-17T04-03-07Z-74d05b7"
   },
@@ -155,7 +155,7 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-mrygrz8/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-mrygrz8/releases/tag/submit%2F2026-10-17T04-03-48Z-2a50947"
   },
@@ -164,7 +164,7 @@
    "assignment": "automation-basics",
    "score": 9,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-Semex37/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-semex37/releases/tag/submit%2F2026-10-17T04-04-05Z-d1485d8"
   },
@@ -173,7 +173,7 @@
    "assignment": "automation-basics",
    "score": 9,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-catinhat01/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-catinhat01/releases/tag/submit%2F2026-10-17T04-02-43Z-6c218aa"
   },
@@ -182,7 +182,7 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-KycokXleba/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-kycokxleba/releases/tag/submit%2F2026-10-17T04-03-17Z-fc4f01e"
   },
@@ -191,7 +191,7 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-semka39/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-semka39/releases/tag/submit%2F2026-10-17T04-04-13Z-ddbae0e"
   },
@@ -200,7 +200,7 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-Bimbusick/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-bimbusick/releases/tag/submit%2F2026-10-17T04-02-28Z-56bee30"
   },
@@ -209,7 +209,7 @@
    "assignment": "automation-basics",
    "score": 9,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-Liondwap/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-liondwap/releases/tag/submit%2F2026-10-17T04-03-43Z-c35e61c"
   },
@@ -218,7 +218,7 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-vebeta/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-vebeta/releases/tag/submit%2F2026-10-17T04-04-31Z-a94d41e"
   },
@@ -227,7 +227,7 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-Aokdi/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-aokdi/releases/tag/submit%2F2026-10-17T04-02-19Z-7549633"
   },
@@ -236,7 +236,7 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-The-Durian-art/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-the-durian-art/releases/tag/submit%2F2026-10-17T04-04-21Z-f7e8e08"
   },
@@ -245,7 +245,7 @@
    "assignment": "automation-basics",
    "score": 9,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-reznya213/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-reznya213/releases/tag/submit%2F2026-10-17T04-03-54Z-2fe5d87"
   },
@@ -254,7 +254,7 @@
    "assignment": "automation-basics",
    "score": 9,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-dominik-DeKoko/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-dominik-dekoko/releases/tag/submit%2F2026-10-17T04-02-48Z-302bcca"
   },
@@ -263,7 +263,7 @@
    "assignment": "automation-basics",
    "score": 9,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-FunnyGlupik/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-funnyglupik/releases/tag/submit%2F2026-10-17T04-02-58Z-2ff7fd0"
   },
@@ -272,7 +272,7 @@
    "assignment": "automation-basics",
    "score": 9,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-Lavandamosh/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-lavandamosh/releases/tag/submit%2F2026-10-17T04-03-25Z-2858553"
   },
