@@ -190,6 +190,7 @@ def review_state(slug: str, owner: str) -> str:
     if status != 200:
         print(f"warning: {repo} PR fetch: HTTP {status}", file=sys.stderr)
         return "unknown"
+    pr_closed = json.loads(body).get("state") == "closed"
     status, body = api(f"repos/{ORG}/{repo}/pulls/1/reviews?per_page=100")
     if status != 200:
         print(f"warning: {repo} reviews fetch: HTTP {status}", file=sys.stderr)
@@ -202,6 +203,8 @@ def review_state(slug: str, owner: str) -> str:
                 decision = state.lower()
     except json.JSONDecodeError:
         return "unknown"
+    if decision == "unreviewed" and pr_closed:
+        return "closed"      # PR closed without a verdict; nothing to review
     return decision
 
 

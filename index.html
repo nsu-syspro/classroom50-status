@@ -40,7 +40,7 @@
   .approved { background: var(--ok-bg); color: var(--ok); }
   .changes_requested { background: var(--bad-bg); color: var(--bad); }
   .unreviewed { background: var(--warn-bg); color: var(--warn); }
-  .no_pr, .unknown, .none { background: #f6f8fa; color: var(--muted); }
+  .closed, .no_pr, .unknown, .none { background: #f6f8fa; color: var(--muted); }
   .missing { color: var(--na); text-align: center; }
   footer { margin-top: 1.5rem; color: var(--muted); font-size: .8rem; }
   .error { color: var(--bad); }
@@ -61,6 +61,7 @@ const LEGEND_RU = {
   approved: "проверено",
   changes_requested: "есть замечания",
   unreviewed: "на проверке",
+  closed: "PR закрыт",
   no_pr: "нет PR",
   unknown: "?",
   none: ""

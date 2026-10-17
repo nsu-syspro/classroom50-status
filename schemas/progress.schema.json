@@ -60,7 +60,7 @@
           "score": { "type": ["integer", "null"], "minimum": 0 },
           "max_score": { "type": "integer", "minimum": 0 },
           "review": {
-            "enum": ["approved", "changes_requested", "unreviewed", "no_pr", "unknown"]
+            "enum": ["approved", "changes_requested", "unreviewed", "closed", "no_pr", "unknown"]
           },
           "pr_url": { "type": "string", "format": "uri" },
           "release_url": { "type": "string", "format": "uri" }
