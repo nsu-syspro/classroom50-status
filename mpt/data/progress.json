@@ -2,7 +2,7 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-17T04:16:44Z",
+ "generated_at": "2026-10-17T06:03:26Z",
  "assignments": [
   {
    "slug": "command-line-basics",
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-17T04:16:32Z",
+   "collected_at": "2026-10-17T06:01:25Z",
    "submitted": 19
   },
   {
@@ -801,20 +801,20 @@
   {
    "student": "mrygrz8",
    "assignment": "git-basics",
-   "score": 10,
+   "score": 6,
    "max_score": 10,
    "review": "unreviewed",
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-mrygrz8/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-mrygrz8/releases/tag/submit%2F2026-10-09T05-02-28Z-84afb84"
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-mrygrz8/releases/tag/submit%2F2026-10-17T05-25-21Z-0facd34"
   },
   {
    "student": "KycokXleba",
    "assignment": "git-basics",
-   "score": 10,
+   "score": 6,
    "max_score": 10,
    "review": "unreviewed",
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-KycokXleba/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-kycokxleba/releases/tag/submit%2F2026-10-09T15-05-17Z-c8d5ab0"
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-kycokxleba/releases/tag/submit%2F2026-10-17T05-25-38Z-efb090e"
   },
   {
    "student": "semka39",
@@ -828,11 +828,11 @@
   {
    "student": "Bimbusick",
    "assignment": "git-basics",
-   "score": 10,
+   "score": 7,
    "max_score": 10,
    "review": "unreviewed",
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Bimbusick/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-bimbusick/releases/tag/submit%2F2026-10-09T14-40-27Z-2ade0ee"
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-bimbusick/releases/tag/submit%2F2026-10-17T05-25-57Z-0550fa4"
   },
   {
    "student": "vebeta",
@@ -873,11 +873,11 @@
   {
    "student": "FunnyGlupik",
    "assignment": "git-basics",
-   "score": 10,
+   "score": 6,
    "max_score": 10,
    "review": "unreviewed",
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-FunnyGlupik/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-funnyglupik/releases/tag/submit%2F2026-10-09T17-01-41Z-4c55b39"
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-funnyglupik/releases/tag/submit%2F2026-10-17T05-25-08Z-2593553"
   },
   {
    "student": "Lavandamosh",
