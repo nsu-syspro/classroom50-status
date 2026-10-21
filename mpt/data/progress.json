@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-18T20:17:14Z",
+ "generated_at": "2026-10-21T20:19:28Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-18T20:16:55Z",
+   "collected_at": "2026-10-21T20:19:18Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-18T20:16:55Z",
+   "collected_at": "2026-10-21T20:19:18Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-18T20:16:55Z",
+   "collected_at": "2026-10-21T20:19:18Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-18T20:16:55Z",
+   "collected_at": "2026-10-21T20:19:18Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-18T20:16:55Z",
+   "collected_at": "2026-10-21T20:19:18Z",
    "submitted": 19
   },
   {
@@ -49,7 +49,7 @@
    "name": "Automation basics",
    "due": "2026-10-16T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-18T20:16:55Z",
+   "collected_at": "2026-10-21T20:19:18Z",
    "submitted": 16
   },
   {
@@ -57,7 +57,7 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-18T20:16:55Z",
+   "collected_at": "2026-10-21T20:19:18Z",
    "submitted": 2
   }
  ],
@@ -193,7 +193,7 @@
    "max_score": 10,
    "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-semka39/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-semka39/releases/tag/submit%2F2026-10-17T04-04-13Z-ddbae0e"
+   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-semka39/releases/tag/submit%2F2026-10-21T17-34-12Z-5fc05f2"
   },
   {
    "student": "Bimbusick",
@@ -828,11 +828,11 @@
   {
    "student": "Bimbusick",
    "assignment": "git-basics",
-   "score": 7,
+   "score": 10,
    "max_score": 10,
    "review": "changes_requested",
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Bimbusick/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-bimbusick/releases/tag/submit%2F2026-10-17T05-25-57Z-0550fa4"
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-bimbusick/releases/tag/submit%2F2026-10-21T16-15-34Z-24a3e4f"
   },
   {
    "student": "vebeta",
