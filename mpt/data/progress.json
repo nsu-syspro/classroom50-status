@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-24T12:49:55Z",
+ "generated_at": "2026-10-24T15:21:37Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T12:49:39Z",
+   "collected_at": "2026-10-24T15:21:18Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T12:49:39Z",
+   "collected_at": "2026-10-24T15:21:18Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T12:49:39Z",
+   "collected_at": "2026-10-24T15:21:18Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T12:49:39Z",
+   "collected_at": "2026-10-24T15:21:18Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T12:49:39Z",
+   "collected_at": "2026-10-24T15:21:18Z",
    "submitted": 19
   },
   {
@@ -49,7 +49,7 @@
    "name": "Automation basics",
    "due": "2026-10-16T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T12:49:39Z",
+   "collected_at": "2026-10-24T15:21:18Z",
    "submitted": 16
   },
   {
@@ -57,7 +57,7 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T12:49:39Z",
+   "collected_at": "2026-10-24T15:21:18Z",
    "submitted": 14
   }
  ],
@@ -977,7 +977,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-vladimir212455/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-vladimir212455/releases/tag/submit%2F2026-10-17T12-52-50Z-4ba4dac"
@@ -987,7 +987,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-KycokXleba/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-kycokxleba/releases/tag/submit%2F2026-10-22T13-23-34Z-3bb8128"
@@ -997,7 +997,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-grommoott/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-grommoott/releases/tag/submit%2F2026-10-24T01-59-40Z-ea0e44b"
@@ -1007,7 +1007,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-semka39/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-semka39/releases/tag/submit%2F2026-10-23T16-54-05Z-5d8f799"
@@ -1017,7 +1017,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-Bimbusick/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-bimbusick/releases/tag/submit%2F2026-10-23T16-20-48Z-6ddd047"
@@ -1027,7 +1027,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-Liondwap/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-liondwap/releases/tag/submit%2F2026-10-23T15-31-32Z-1d0e6b9"
@@ -1037,7 +1037,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-vebeta/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-vebeta/releases/tag/submit%2F2026-10-23T16-08-35Z-507e870"
@@ -1047,7 +1047,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-The-Durian-art/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-the-durian-art/releases/tag/submit%2F2026-10-23T16-29-38Z-f528c33"
@@ -1057,7 +1057,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-mrygrz8/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-mrygrz8/releases/tag/submit%2F2026-10-23T15-30-51Z-de79b63"
@@ -1067,7 +1067,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-catinhat01/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-catinhat01/releases/tag/submit%2F2026-10-23T16-58-38Z-1f07c83"
@@ -1077,7 +1077,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-dominik-DeKoko/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-dominik-dekoko/releases/tag/submit%2F2026-10-23T15-31-35Z-1fce8fa"
@@ -1087,7 +1087,7 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-Lavandamosh/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-lavandamosh/releases/tag/submit%2F2026-10-23T17-04-28Z-50982d4"
@@ -1097,7 +1097,7 @@
    "assignment": "markup-basics",
    "score": 9,
    "max_score": 10,
-   "review": "unreviewed",
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-reznya213/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-reznya213/releases/tag/submit%2F2026-10-24T04-24-56Z-bed29c3"
