@@ -62,6 +62,10 @@
           "review": {
             "enum": ["approved", "changes_requested", "unreviewed", "closed", "no_pr", "unknown"]
           },
+          "fix_submitted": {
+            "type": "boolean",
+            "description": "True when the last verdict on the PR is CHANGES_REQUESTED and the student re-submitted after that review was posted: the fix is back 'under review' until the teacher re-reviews. False for every other state."
+          },
           "pr_url": { "type": "string", "format": "uri" },
           "release_url": { "type": "string", "format": "uri" }
         }

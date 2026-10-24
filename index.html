@@ -43,6 +43,9 @@
   .badge { display: inline-block; padding: .05rem .45rem; border-radius: 3px; font-size: .78rem; }
   .approved { background: var(--ok-bg); color: var(--ok); }
   .changes_requested { background: var(--bad-bg); color: var(--bad); }
+  /* changes_requested + the student re-submitted after the review: back
+     "under review", but distinct from a never-reviewed cell (blue) */
+  .changes_requested_seen { background: #ddf4ff; color: #0969da; }
   .unreviewed { background: var(--warn-bg); color: var(--warn); }
   .closed, .no_pr, .unknown, .none { background: #f6f8fa; color: var(--muted); }
   .missing { color: var(--na); text-align: center; }
@@ -64,8 +67,8 @@
 const LEGEND_RU = {
   approved: "проверено",
   changes_requested: "есть замечания",
+  changes_requested_seen: "на проверке*",
   unreviewed: "на проверке",
-  closed: "PR закрыт",
   closed: "PR закрыт",
   no_pr: "нет PR",
   unknown: "?",
@@ -177,10 +180,12 @@ async function renderClassroom(slug) {
   legend.append(" ");
   legend.append(el("span", "badge changes_requested", LEGEND_RU.changes_requested));
   legend.append(" ");
+  legend.append(el("span", "badge changes_requested_seen", LEGEND_RU.changes_requested_seen));
+  legend.append(" ");
   legend.append(el("span", "badge unreviewed", LEGEND_RU.unreviewed));
   legend.append(" ");
   legend.append(el("span", "badge closed", LEGEND_RU.closed));
-  legend.append(". Ссылка в ячейке ведёт на ваш pull request с решением.");
+  legend.append(". Звёздочка: студент отправил исправления после замечаний, они ждут повторной проверки. Ссылка в ячейке ведёт на ваш pull request с решением.");
   app.append(legend);
 
   const table = el("table");
@@ -217,7 +222,13 @@ async function renderClassroom(slug) {
       }
       wrap.append(score, el("span", "dot", "·"));
       const status = el("span", "status");
-      status.append(el("span", "badge " + c.review, LEGEND_RU[c.review] || c.review));
+      const review = (c.review === "changes_requested" && c.fix_submitted)
+        ? "changes_requested_seen" : c.review;
+      const badge = el("span", "badge " + review, LEGEND_RU[review] || review);
+      if (review === "changes_requested_seen") {
+        badge.title = "Студент отправил исправления после замечаний; ожидает повторной проверки";
+      }
+      status.append(badge);
       wrap.append(status);
       td.append(wrap);
       tr.append(td);

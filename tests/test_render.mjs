@@ -34,7 +34,10 @@ async function runView(search, files, checks) {
     }
     const path = u.pathname.replace("/classroom50-status", "").replace(/^\//, "");
     if (!(path in files)) throw new Error("unexpected fetch: " + path);
-    return { ok: true, json: async () => JSON.parse(readFileSync(join(repo, path), "utf8")) };
+    // Serve the in-memory object, not a fresh disk read: checks may mutate
+    // the data (e.g. the fix_submitted badge cases below), and test_footer
+    // already works this way.
+    return { ok: true, json: async () => files[path] };
   };
   window.eval(js);
   await new Promise((resolve) => {
@@ -56,12 +59,29 @@ await runView("", { "classrooms.json": classrooms }, (text, doc) => [
   ["index: classroom title from classroom50", text.includes("Modern Programmer's Tools")],
 ]);
 
+// --- fix_submitted badge: changes_requested + student re-submitted after
+// the review. Fixture-tolerant: force the first two cells into both
+// variants regardless of what the generated data currently holds.
+data.cells[0].review = "changes_requested";
+data.cells[0].fix_submitted = true;
+if (data.cells[1]) {
+  data.cells[1].review = "changes_requested";
+  delete data.cells[1].fix_submitted;
+}
+
 // --- single classroom view ---
 await runView("?classroom=mpt", { "mpt/data/progress.json": data }, (text, doc) => [
   ["mpt: title with separator", (doc.querySelector("h1") || {}).textContent === "Modern Programmer's Tools \u00b7 NSU Sys.Pro"],
   ["mpt: no meta line under title", !doc.querySelector("p.meta")],
   ["mpt: legend text", text.includes("Оценки и статус проверки")],
   ["mpt: badges rendered with labels", text.includes("проверено") && text.includes("на проверке")],
+  ["mpt: fix_submitted badge (starred na-proverke) in a cell", !!doc.querySelector("td .badge.changes_requested_seen")],
+  ["mpt: fix_submitted badge class + tooltip", (() => {
+    const b = doc.querySelector("td .badge.changes_requested_seen");
+    return !!b && (b.title || "").includes("исправления");
+  })()],
+  ["mpt: plain changes_requested badge intact in a cell", !!doc.querySelector("td .badge.changes_requested")],
+  ["mpt: legend lists the starred badge", text.includes("Звёздочка: студент отправил исправления")],
   ["mpt: student names last-first", text.includes("Данилов Лев Антонович")],
   ["mpt: nameless student last", (() => {
     const rows = [...doc.querySelectorAll("tbody tr")];

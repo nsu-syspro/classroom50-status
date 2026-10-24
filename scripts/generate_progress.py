@@ -7,8 +7,10 @@ Reads (via GitHub Contents API, PROGRESS_PAT):
   - <org>/<config-repo>/<classroom>/roster.csv       (full names)
 Fetches live per-student PR review states (Feedback PR #1, last APPROVED /
 CHANGES_REQUESTED wins) for every (assignment, student) cell that has a
-collected entry. Writes <classroom>/data/progress.json
-(schema nsu-syspro/progress/v1).
+collected entry. When the last verdict is CHANGES_REQUESTED but the student
+re-submitted after that review was posted, the cell gets fix_submitted=true:
+such fixes are back "under review" until the teacher re-reviews. Writes
+<classroom>/data/progress.json (schema nsu-syspro/progress/v1).
 
 Classroom knobs come from <classroom>/publish.json in this repo:
   {
@@ -182,30 +184,49 @@ def select_assignments(entries: list[dict], knobs: dict, now: datetime,
     return out
 
 
-def review_state(slug: str, owner: str) -> str:
+def review_state(slug: str, owner: str, latest_sub: str | None) -> tuple[str, bool]:
+    """(review state, fix_submitted) for one (assignment, student) cell.
+
+    fix_submitted is true when the last verdict on the PR is
+    CHANGES_REQUESTED and the student's latest submission is newer than that
+    review: the student answered the feedback, the cell is awaiting a
+    re-review. Compares the submission timestamp (from scores.json, set by
+    the grading runner at tag creation) with the review's submitted_at, so a
+    teacher-side re-request of changes after a fix correctly clears the
+    flag.
+    """
     repo = f"{CLASSROOM}-{slug}-{owner}"
     status, body = api(f"repos/{ORG}/{repo}/pulls/1")
     if status == 404:
-        return "no_pr"
+        return "no_pr", False
     if status != 200:
         print(f"warning: {repo} PR fetch: HTTP {status}", file=sys.stderr)
-        return "unknown"
+        return "unknown", False
     pr_closed = json.loads(body).get("state") == "closed"
     status, body = api(f"repos/{ORG}/{repo}/pulls/1/reviews?per_page=100")
     if status != 200:
         print(f"warning: {repo} reviews fetch: HTTP {status}", file=sys.stderr)
-        return "unknown"
+        return "unknown", False
     decision = "unreviewed"
+    decision_at: str | None = None
     try:
         for review in json.loads(body):
             state = review.get("state")
             if state in ("APPROVED", "CHANGES_REQUESTED"):
                 decision = state.lower()
+                decision_at = review.get("submitted_at")
     except json.JSONDecodeError:
-        return "unknown"
+        return "unknown", False
     if decision == "unreviewed" and pr_closed:
-        return "closed"      # PR closed without a verdict; nothing to review
-    return decision
+        return "closed", False      # PR closed without a verdict; nothing to review
+    fix_submitted = bool(
+        decision == "changes_requested"
+        and latest_sub
+        and decision_at
+        and parse_rfc3339(latest_sub) and parse_rfc3339(decision_at)
+        and parse_rfc3339(latest_sub) > parse_rfc3339(decision_at)
+    )
+    return decision, fix_submitted
 
 
 def main() -> int:
@@ -258,7 +279,10 @@ def main() -> int:
     # --- cells ---
     cells: list[dict] = []
     owners_seen: set[str] = set()
-    jobs: list[tuple[str, str]] = []
+    # (slug, owner) -> latest submission datetime; feeds the fix_submitted
+    # detection in review_state (student answered a CHANGES_REQUESTED verdict).
+    latest_subs: dict[tuple[str, str], str | None] = {}
+    jobs: list[tuple[str, str, str | None]] = []
     for slug in sorted(published_slugs):
         bucket = scores.get(slug) or {}
         for entry in bucket.get("entries", []):
@@ -266,12 +290,16 @@ def main() -> int:
             if owner in excluded:
                 continue
             owners_seen.add(owner)
-            jobs.append((slug, owner))
+            subs = entry.get("submissions") or []
+            latest = max(subs, key=lambda x: x.get("datetime") or "", default={})
+            latest_dt = latest.get("datetime")
+            latest_subs[(slug, owner)] = latest_dt
+            jobs.append((slug, owner, latest_dt))
 
     with ThreadPoolExecutor(max_workers=4) as pool:
         states = dict(
             zip(
-                [(s, o) for s, o in jobs],
+                [(s, o) for s, o, _ in jobs],
                 pool.map(lambda job: review_state(*job), jobs),
             )
         )
@@ -291,12 +319,14 @@ def main() -> int:
             # low score for anyone who re-submitted.
             subs = entry.get("submissions") or []
             latest = max(subs, key=lambda x: x.get("datetime") or "", default={})
+            state, fix_submitted = states.get((slug, owner), ("unknown", False))
             cells.append({
                 "student": owner,
                 "assignment": slug,
                 "score": latest.get("score"),
                 "max_score": latest.get("max-score") or assignment_max,
-                "review": states.get((slug, owner), "unknown"),
+                "review": state,
+                "fix_submitted": fix_submitted,
                 "pr_url": f"https://github.com/{ORG}/{CLASSROOM}-{slug}-{owner}/pull/1",
                 "release_url": latest.get("release"),
             })
