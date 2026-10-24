@@ -79,7 +79,10 @@ await runView("?classroom=mpt", { "mpt/data/progress.json": data }, (text, doc) 
     const b = doc.querySelector("td .badge.changes_requested_seen");
     return !!b && b.textContent === "на проверке" && !text.includes("на проверке*");
   })()],
-  ["mpt: legend na-proverke badge is split two-color", !!doc.querySelector(".legend .badge.seen-split")],
+  ["mpt: legend na-proverke badge is split two-color with gradient text", (() => {
+    const b = doc.querySelector(".legend .badge.seen-split");
+    return !!b && !!b.querySelector(".split-text") && b.querySelector(".split-text").textContent === "на проверке";
+  })()],
   ["mpt: plain changes_requested badge intact in a cell", !!doc.querySelector("td .badge.changes_requested")],
   ["mpt: no asterisk note in legend", !text.includes("Звёздочка")],
   ["mpt: student names last-first", text.includes("Данилов Лев Антонович")],

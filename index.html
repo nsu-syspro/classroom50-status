@@ -50,6 +50,14 @@
      specificity, later rule wins. */
   .changes_requested_seen { background: #ddf4ff; color: #0969da; }
   .seen-split { background: linear-gradient(135deg, var(--warn-bg) 50%, #ddf4ff 50%); }
+  /* gradient text mirroring the badge's yellow/blue split (needs an inner
+     span: background-clip: text on the badge itself would eat its background) */
+  .seen-split .split-text {
+    background: linear-gradient(135deg, var(--warn) 50%, #0969da 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
   .closed, .no_pr, .unknown, .none { background: #f6f8fa; color: var(--muted); }
   .missing { color: var(--na); text-align: center; }
   footer { margin-top: 1.5rem; color: var(--muted); font-size: .8rem; }
@@ -183,7 +191,9 @@ async function renderClassroom(slug) {
   legend.append(" ");
   legend.append(el("span", "badge changes_requested", LEGEND_RU.changes_requested));
   legend.append(" ");
-  legend.append(el("span", "badge unreviewed seen-split", LEGEND_RU.unreviewed));
+  const legendSplit = el("span", "badge unreviewed seen-split");
+  legendSplit.append(el("span", "split-text", LEGEND_RU.unreviewed));
+  legend.append(legendSplit);
   legend.append(" ");
   legend.append(el("span", "badge closed", LEGEND_RU.closed));
   legend.append(". Ссылка в ячейке ведёт на ваш pull request с решением.");
