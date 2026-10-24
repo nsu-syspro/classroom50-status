@@ -75,13 +75,13 @@ await runView("?classroom=mpt", { "mpt/data/progress.json": data }, (text, doc) 
   ["mpt: no meta line under title", !doc.querySelector("p.meta")],
   ["mpt: legend text", text.includes("Оценки и статус проверки")],
   ["mpt: badges rendered with labels", text.includes("проверено") && text.includes("на проверке")],
-  ["mpt: fix_submitted badge (starred na-proverke) in a cell", !!doc.querySelector("td .badge.changes_requested_seen")],
-  ["mpt: fix_submitted badge class + tooltip", (() => {
+  ["mpt: fix_submitted cell: blue na-proverke badge, no asterisk", (() => {
     const b = doc.querySelector("td .badge.changes_requested_seen");
-    return !!b && (b.title || "").includes("исправления");
+    return !!b && b.textContent === "на проверке" && !text.includes("на проверке*");
   })()],
+  ["mpt: legend na-proverke badge is split two-color", !!doc.querySelector(".legend .badge.seen-split")],
   ["mpt: plain changes_requested badge intact in a cell", !!doc.querySelector("td .badge.changes_requested")],
-  ["mpt: legend lists the starred badge", text.includes("Звёздочка: студент отправил исправления")],
+  ["mpt: no asterisk note in legend", !text.includes("Звёздочка")],
   ["mpt: student names last-first", text.includes("Данилов Лев Антонович")],
   ["mpt: nameless student last", (() => {
     const rows = [...doc.querySelectorAll("tbody tr")];
