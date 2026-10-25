@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-24T20:17:38Z",
+ "generated_at": "2026-10-25T20:16:19Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T20:17:24Z",
+   "collected_at": "2026-10-25T20:16:05Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T20:17:24Z",
+   "collected_at": "2026-10-25T20:16:05Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T20:17:24Z",
+   "collected_at": "2026-10-25T20:16:05Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T20:17:24Z",
+   "collected_at": "2026-10-25T20:16:05Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T20:17:24Z",
+   "collected_at": "2026-10-25T20:16:05Z",
    "submitted": 19
   },
   {
@@ -49,7 +49,7 @@
    "name": "Automation basics",
    "due": "2026-10-16T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T20:17:24Z",
+   "collected_at": "2026-10-25T20:16:05Z",
    "submitted": 16
   },
   {
@@ -57,8 +57,8 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-24T20:17:24Z",
-   "submitted": 16
+   "collected_at": "2026-10-25T20:16:05Z",
+   "submitted": 17
   }
  ],
  "students": [
@@ -1121,6 +1121,16 @@
    "fix_submitted": true,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-Semex37/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-semex37/releases/tag/submit%2F2026-10-24T17-31-28Z-7fc2631"
+  },
+  {
+   "student": "FunnyGlupik",
+   "assignment": "markup-basics",
+   "score": 7,
+   "max_score": 10,
+   "review": "unreviewed",
+   "fix_submitted": false,
+   "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-FunnyGlupik/pull/1",
+   "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-funnyglupik/releases/tag/submit%2F2026-10-25T16-45-20Z-86d05c8"
   },
   {
    "student": "vladimir212455",
