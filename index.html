@@ -34,8 +34,12 @@
   a:hover { text-decoration: underline; }
   /* score · squares: the dot is the fixed center of the column, the score
      is right-aligned to its left and the per-task squares left-aligned to
-     its right, so all dots line up vertically regardless of text lengths */
-  .cell { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .3rem; }
+     its right, so all dots line up vertically regardless of text lengths.
+     minmax(0, 1fr), NOT plain 1fr: a bare 1fr track has an auto minimum, so
+     when the column is squeezed to its widest cell ("10/10" rows) a cell
+     with a narrower score ("0/6") gets leftover free space split across
+     both side tracks, which pushed its dot off the column center. */
+  .cell { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: .3rem; }
   .cell .score { text-align: right; white-space: nowrap; }
   .cell .dot { color: #8c959f; padding: 0 .1em; }
   .cell .status { text-align: left; }
