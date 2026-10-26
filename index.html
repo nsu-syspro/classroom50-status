@@ -213,7 +213,7 @@ async function renderClassroom(slug) {
   document.title = title;
   app.append(el("h1", null, title));
   const legend = el("p", "legend");
-  legend.append("Ячейка: зачтено / баллов автотеста. Квадраты: ");
+  legend.append("Ячейка: зачтено / баллов автотеста. Задания: ");
   legend.append(squareDemo("accepted"), " зачтено · ");
   legend.append(squareDemo("rejected"), " на доработку · ");
   legend.append(squareDemo("pending"), " сдано, ожидает проверки · ");
