@@ -59,12 +59,13 @@
      green-yellow luminance gap was too small. */
   .squares { display: inline-flex; gap: 2px; vertical-align: middle; }
   .squares i { width: 9px; height: 9px; border-radius: 2px; }
-  /* green square uses the lighter #3fb950, not var(--ok) #1a7f37: the two
-     darks have almost equal luminance (~1.05:1 WCAG), so green-red
-     neighbors blur together; #3fb950 lifts the ratio to ~2.1:1. Text
-     badges keep --ok for contrast on their light backgrounds. */
+  /* Square shades picked from a side-by-side combination sheet (teacher,
+     2026-10-26): the LIGHT set separates cleanly in every adjacency while
+     the darker set (var(--ok)/var(--bad)) has near-equal luminances and
+     blurs. No border on G/R/Y; gray keeps its hairline to stay visible on
+     white. Text badges keep the darker vars for contrast on light bgs. */
   .squares .accepted { background: #3fb950; }
-  .squares .rejected { background: var(--bad); }
+  .squares .rejected { background: #f85149; }
   .squares .pending  { background: #e3b341; }
   .squares .failed   { background: #eaeef2; box-shadow: inset 0 0 0 1px var(--line); }
   .closed, .no_pr, .unknown, .none { background: #f6f8fa; color: var(--muted); }
