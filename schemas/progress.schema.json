@@ -67,7 +67,17 @@
             "description": "True when the last verdict on the PR is CHANGES_REQUESTED and the student re-submitted after that review was posted: the fix is back 'under review' until the teacher re-reviews. False for every other state."
           },
           "pr_url": { "type": "string", "format": "uri" },
-          "release_url": { "type": "string", "format": "uri" }
+          "release_url": { "type": "string", "format": "uri" },
+          "last_student_comment": {
+            "type": "object",
+            "description": "Latest comment authored by the student on the Feedback PR (conversation or inline review thread). Teacher-side discussion triage signal; not rendered on the status page. Absent when the student never commented.",
+            "additionalProperties": false,
+            "required": ["at", "body"],
+            "properties": {
+              "at": { "type": "string", "format": "date-time" },
+              "body": { "type": "string", "maxLength": 120 }
+            }
+          }
         }
       }
     }

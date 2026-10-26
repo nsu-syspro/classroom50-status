@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body { font: 16px sans-serif; }
+.badge { display: inline-block; padding: .05rem .45rem; border-radius: 3px; font-size: .78rem; }
+</style></head><body><div id=out></div><script>
+const labels = ["проверено", "есть замечания", "на проверке", "PR закрыт", "нет PR"];
+const out = document.getElementById('out');
+for (const l of labels) {
+  const b = document.createElement('span'); b.className='badge'; b.textContent = l;
+  out.append(b);
+  const w = document.createElement('span');
+  // width measured after append
+  requestAnimationFrame(() => { w.textContent = '  -> ' + b.getBoundingClientRect().width.toFixed(1) + 'px'; });
+  out.append(w, document.createElement('br'));
+}
+</script></body></html>

@@ -184,8 +184,8 @@ def select_assignments(entries: list[dict], knobs: dict, now: datetime,
     return out
 
 
-def review_state(slug: str, owner: str, latest_sub: str | None) -> tuple[str, bool]:
-    """(review state, fix_submitted) for one (assignment, student) cell.
+def review_state(slug: str, owner: str, latest_sub: str | None) -> tuple[str, bool, dict | None]:
+    """(review state, fix_submitted, last student comment) for one cell.
 
     fix_submitted is true when the last verdict on the PR is
     CHANGES_REQUESTED and the student's latest submission is newer than that
@@ -194,19 +194,27 @@ def review_state(slug: str, owner: str, latest_sub: str | None) -> tuple[str, bo
     the grading runner at tag creation) with the review's submitted_at, so a
     teacher-side re-request of changes after a fix correctly clears the
     flag.
+
+    The third value summarizes STUDENT discussion activity on the PR:
+    students ask questions / start threads there, and the teacher only sees
+    them by opening each PR. Both conversation comments (issues/1/comments)
+    and inline review-comment replies (pulls/1/comments) are scanned; the
+    latest comment authored by the student is returned as
+    {at, body} (body whitespace-collapsed, truncated). None when the student
+    never commented.
     """
     repo = f"{CLASSROOM}-{slug}-{owner}"
     status, body = api(f"repos/{ORG}/{repo}/pulls/1")
     if status == 404:
-        return "no_pr", False
+        return "no_pr", False, None
     if status != 200:
         print(f"warning: {repo} PR fetch: HTTP {status}", file=sys.stderr)
-        return "unknown", False
+        return "unknown", False, None
     pr_closed = json.loads(body).get("state") == "closed"
     status, body = api(f"repos/{ORG}/{repo}/pulls/1/reviews?per_page=100")
     if status != 200:
         print(f"warning: {repo} reviews fetch: HTTP {status}", file=sys.stderr)
-        return "unknown", False
+        return "unknown", False, None
     decision = "unreviewed"
     decision_at: str | None = None
     try:
@@ -216,9 +224,9 @@ def review_state(slug: str, owner: str, latest_sub: str | None) -> tuple[str, bo
                 decision = state.lower()
                 decision_at = review.get("submitted_at")
     except json.JSONDecodeError:
-        return "unknown", False
+        return "unknown", False, None
     if decision == "unreviewed" and pr_closed:
-        return "closed", False      # PR closed without a verdict; nothing to review
+        return "closed", False, None      # PR closed without a verdict; nothing to review
     fix_submitted = bool(
         decision == "changes_requested"
         and latest_sub
@@ -226,7 +234,30 @@ def review_state(slug: str, owner: str, latest_sub: str | None) -> tuple[str, bo
         and parse_rfc3339(latest_sub) and parse_rfc3339(decision_at)
         and parse_rfc3339(latest_sub) > parse_rfc3339(decision_at)
     )
-    return decision, fix_submitted
+
+    last_student_comment: dict | None = None
+    for endpoint in (f"repos/{ORG}/{repo}/issues/1/comments",
+                     f"repos/{ORG}/{repo}/pulls/1/comments"):
+        status, body = api(endpoint)
+        if status != 200:
+            print(f"warning: {repo} comments fetch: HTTP {status}", file=sys.stderr)
+            continue
+        try:
+            comments = json.loads(body)
+        except json.JSONDecodeError:
+            continue
+        for comment in comments:
+            author = ((comment.get("user") or {}).get("login") or "").lower()
+            if author != owner.lower():
+                continue                      # only the student's own activity
+            at = comment.get("created_at") or ""
+            text = comment.get("body") or ""
+            if last_student_comment is None or at > last_student_comment["at"]:
+                last_student_comment = {
+                    "at": at,
+                    "body": " ".join(text.split())[:120],
+                }
+    return decision, fix_submitted, last_student_comment
 
 
 def main() -> int:
@@ -319,8 +350,10 @@ def main() -> int:
             # low score for anyone who re-submitted.
             subs = entry.get("submissions") or []
             latest = max(subs, key=lambda x: x.get("datetime") or "", default={})
-            state, fix_submitted = states.get((slug, owner), ("unknown", False))
-            cells.append({
+            state, fix_submitted, last_student_comment = states.get(
+                (slug, owner), ("unknown", False, None)
+            )
+            cell = {
                 "student": owner,
                 "assignment": slug,
                 "score": latest.get("score"),
@@ -329,7 +362,13 @@ def main() -> int:
                 "fix_submitted": fix_submitted,
                 "pr_url": f"https://github.com/{ORG}/{CLASSROOM}-{slug}-{owner}/pull/1",
                 "release_url": latest.get("release"),
-            })
+            }
+            if last_student_comment is not None:
+                # Student discussion activity on the PR (questions, threads).
+                # Deliberately NOT rendered on the status page - teacher-side
+                # triage signal only, read from progress.json directly.
+                cell["last_student_comment"] = last_student_comment
+            cells.append(cell)
 
     students = [u for u in roster_students if u not in excluded]
     students += sorted(owners_seen - set(students) - excluded)

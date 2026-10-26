@@ -2,7 +2,7 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-25T20:16:19Z",
+ "generated_at": "2026-10-26T03:26:04Z",
  "assignments": [
   {
    "slug": "command-line-basics",
@@ -140,7 +140,11 @@
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-vladimir212455/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-vladimir212455/releases/tag/submit%2F2026-10-17T13-39-59Z-ac45782"
+   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-vladimir212455/releases/tag/submit%2F2026-10-17T13-39-59Z-ac45782",
+   "last_student_comment": {
+    "at": "2026-10-17T13:56:03Z",
+    "body": "где это посмотреть ? Я вроде поменял."
+   }
   },
   {
    "student": "grommoott",
@@ -150,7 +154,11 @@
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-grommoott/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-grommoott/releases/tag/submit%2F2026-10-18T09-41-21Z-6c18e02"
+   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-grommoott/releases/tag/submit%2F2026-10-18T09-41-21Z-6c18e02",
+   "last_student_comment": {
+    "at": "2026-10-18T09:40:30Z",
+    "body": "Забыл вернуть после тестов, извините)"
+   }
   },
   {
    "student": "mrygrz8",
@@ -320,7 +328,11 @@
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-semka39/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-semka39/releases/tag/submit%2F2026-10-08T19-09-41Z-6eb9a25"
+   "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-semka39/releases/tag/submit%2F2026-10-08T19-09-41Z-6eb9a25",
+   "last_student_comment": {
+    "at": "2026-10-09T14:50:24Z",
+    "body": "> LGTM, только test.tar лишний добавился Он почему-то каждый раз после первого теста появляется. ``` ❯ ls README.md solu"
+   }
   },
   {
    "student": "catinhat01",
@@ -460,7 +472,11 @@
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-FunnyGlupik/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-funnyglupik/releases/tag/submit%2F2026-10-02T16-49-39Z-0464c87"
+   "release_url": "https://github.com/nsu-syspro/mpt-bash-basics-funnyglupik/releases/tag/submit%2F2026-10-02T16-49-39Z-0464c87",
+   "last_student_comment": {
+    "at": "2026-10-05T07:35:06Z",
+    "body": "Так в том и дело. Я сначала не делал +x, но во второй и третьей попытке исправился"
+   }
   },
   {
    "student": "KycokXleba",
@@ -480,7 +496,11 @@
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-semka39/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-command-line-basics-semka39/releases/tag/submit%2F2026-09-09T15-56-10Z-78b92d4"
+   "release_url": "https://github.com/nsu-syspro/mpt-command-line-basics-semka39/releases/tag/submit%2F2026-09-09T15-56-10Z-78b92d4",
+   "last_student_comment": {
+    "at": "2026-09-13T09:37:11Z",
+    "body": "> Вроде бы это должно работать и без `sed`'ов. Я просто думал там несколько файлов с одинаковыми именами может быть"
+   }
   },
   {
    "student": "grommoott",
@@ -1270,7 +1290,11 @@
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-The-Durian-art/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-regex-basics-the-durian-art/releases/tag/submit%2F2026-09-18T15-30-29Z-af833ff"
+   "release_url": "https://github.com/nsu-syspro/mpt-regex-basics-the-durian-art/releases/tag/submit%2F2026-09-18T15-30-29Z-af833ff",
+   "last_student_comment": {
+    "at": "2026-09-22T12:49:00Z",
+    "body": "Я только к третьей понял, что так можно было. Вторую оставил уже как есть)"
+   }
   },
   {
    "student": "reznya213",
