@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-26T05:44:08Z",
+ "generated_at": "2026-10-26T06:03:04Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T05:43:48Z",
+   "collected_at": "2026-10-26T06:02:47Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T05:43:48Z",
+   "collected_at": "2026-10-26T06:02:47Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T05:43:48Z",
+   "collected_at": "2026-10-26T06:02:47Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T05:43:48Z",
+   "collected_at": "2026-10-26T06:02:47Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T05:43:48Z",
+   "collected_at": "2026-10-26T06:02:47Z",
    "submitted": 19
   },
   {
@@ -49,7 +49,7 @@
    "name": "Automation basics",
    "due": "2026-10-16T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T05:43:48Z",
+   "collected_at": "2026-10-26T06:02:47Z",
    "submitted": 16
   },
   {
@@ -57,89 +57,89 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T05:43:48Z",
+   "collected_at": "2026-10-26T06:02:47Z",
    "submitted": 17
   }
  ],
  "students": [
   {
    "username": "The-Durian-art",
-   "display": "Артес Дэннис Андреевич",
+   "display": "Артес Дэннис",
    "zachet": "fail"
   },
   {
    "username": "Semex37",
-   "display": "Голоколос Семён Максимович",
+   "display": "Голоколос Семён",
    "zachet": "pass"
   },
   {
    "username": "mrygrz8",
-   "display": "Грозная Мария Игоревна",
+   "display": "Грозная Мария",
    "zachet": "pass"
   },
   {
    "username": "Liondwap",
-   "display": "Данилов Лев Антонович",
+   "display": "Данилов Лев",
    "zachet": "pass"
   },
   {
    "username": "semka39",
-   "display": "Дружинин Семён Владимирович",
+   "display": "Дружинин Семён",
    "zachet": "pass"
   },
   {
    "username": "vladimir212455",
-   "display": "Мазный Владимир Юрьевич",
+   "display": "Мазный Владимир",
    "zachet": "pass"
   },
   {
    "username": "reznya213",
-   "display": "Мирошников Глеб Георгиевич",
+   "display": "Мирошников Глеб",
    "zachet": "pass"
   },
   {
    "username": "catinhat01",
-   "display": "Обогрелов Илья Павлович",
+   "display": "Обогрелов Илья",
    "zachet": "pass"
   },
   {
    "username": "dominik-DeKoko",
-   "display": "Пуртов Кирилл Васильевич",
+   "display": "Пуртов Кирилл",
    "zachet": "fail"
   },
   {
    "username": "KycokXleba",
-   "display": "Санжаров Михаил Александрович",
+   "display": "Санжаров Михаил",
    "zachet": "fail"
   },
   {
    "username": "Aokdi",
-   "display": "Стыпник Святослав Вячеславович",
+   "display": "Стыпник Святослав",
    "zachet": "fail"
   },
   {
    "username": "Lavandamosh",
-   "display": "Фадеенко Илья Олегович",
+   "display": "Фадеенко Илья",
    "zachet": "fail"
   },
   {
    "username": "vebeta",
-   "display": "Хегай Владислав Александрович",
+   "display": "Хегай Владислав",
    "zachet": "fail"
   },
   {
    "username": "FunnyGlupik",
-   "display": "Чепурченко Григорий Викторович",
+   "display": "Чепурченко Григорий",
    "zachet": "fail"
   },
   {
    "username": "Bimbusick",
-   "display": "Шелепов Кирилл Игоревич",
+   "display": "Шелепов Кирилл",
    "zachet": "pass"
   },
   {
    "username": "grommoott",
-   "display": "Шуваев Григорий Алексеевич",
+   "display": "Шуваев Григорий",
    "zachet": "pass"
   },
   {
@@ -250,7 +250,7 @@
    "accepted_score": 7,
    "tasks": [
     "accepted",
-    "scored",
+    "rejected",
     "accepted",
     "accepted"
    ],
@@ -318,7 +318,7 @@
    "accepted_score": 7,
    "tasks": [
     "accepted",
-    "scored",
+    "rejected",
     "accepted",
     "accepted"
    ],
@@ -335,7 +335,7 @@
    "accepted_score": 7,
    "tasks": [
     "accepted",
-    "scored",
+    "rejected",
     "accepted",
     "accepted"
    ],
@@ -352,7 +352,7 @@
    "accepted_score": 7,
    "tasks": [
     "accepted",
-    "scored",
+    "rejected",
     "accepted",
     "accepted"
    ],
@@ -386,9 +386,9 @@
    "accepted_score": 6,
    "tasks": [
     "accepted",
-    "scored",
+    "rejected",
     "accepted",
-    "unscored"
+    "rejected"
    ],
    "review": "changes_requested",
    "fix_submitted": false,
@@ -403,9 +403,9 @@
    "accepted_score": 6,
    "tasks": [
     "accepted",
-    "scored",
+    "rejected",
     "accepted",
-    "unscored"
+    "rejected"
    ],
    "review": "changes_requested",
    "fix_submitted": false,
@@ -420,7 +420,7 @@
    "accepted_score": 7,
    "tasks": [
     "accepted",
-    "scored",
+    "rejected",
     "accepted",
     "accepted"
    ],
@@ -559,9 +559,9 @@
    "max_score": 10,
    "accepted_score": 3,
    "tasks": [
-    "scored",
-    "scored",
-    "scored",
+    "rejected",
+    "rejected",
+    "rejected",
     "accepted"
    ],
    "review": "changes_requested",
@@ -627,7 +627,7 @@
    "max_score": 10,
    "accepted_score": 8,
    "tasks": [
-    "unscored",
+    "rejected",
     "accepted",
     "accepted",
     "accepted"
@@ -712,10 +712,10 @@
    "max_score": 10,
    "accepted_score": 0,
    "tasks": [
-    "unscored",
-    "unscored",
-    "unscored",
-    "unscored"
+    "rejected",
+    "rejected",
+    "rejected",
+    "rejected"
    ],
    "review": "changes_requested",
    "fix_submitted": false,
@@ -1096,7 +1096,7 @@
    "tasks": [
     "accepted",
     "accepted",
-    "scored",
+    "rejected",
     "accepted"
    ],
    "review": "changes_requested",
@@ -1198,8 +1198,8 @@
    "tasks": [
     "accepted",
     "accepted",
-    "scored",
-    "scored"
+    "rejected",
+    "rejected"
    ],
    "review": "changes_requested",
    "fix_submitted": false,
@@ -1428,7 +1428,7 @@
    "tasks": [
     "accepted",
     "accepted",
-    "unscored"
+    "rejected"
    ],
    "review": "changes_requested",
    "fix_submitted": false,
@@ -1540,7 +1540,7 @@
    "tasks": [
     "accepted",
     "accepted",
-    "unscored"
+    "rejected"
    ],
    "review": "changes_requested",
    "fix_submitted": false,
@@ -1672,7 +1672,7 @@
    "max_score": 10,
    "accepted_score": 7,
    "tasks": [
-    "scored",
+    "rejected",
     "accepted",
     "accepted",
     "accepted"
@@ -1740,7 +1740,7 @@
    "max_score": 10,
    "accepted_score": 7,
    "tasks": [
-    "scored",
+    "rejected",
     "accepted",
     "accepted",
     "accepted"
@@ -1777,7 +1777,7 @@
     "accepted",
     "accepted",
     "accepted",
-    "unscored"
+    "failed"
    ],
    "review": "approved",
    "fix_submitted": false,
@@ -1826,7 +1826,7 @@
    "accepted_score": 7,
    "tasks": [
     "accepted",
-    "unscored",
+    "rejected",
     "accepted",
     "accepted"
    ],
