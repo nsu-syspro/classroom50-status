@@ -112,12 +112,12 @@ Set `"enabled": false` in its `publish.json`. It drops out of the matrix
   APPROVED review accepts every task the autograder scored; a
   CHANGES_REQUESTED review accepts exactly the tasks checked in its markdown
   task list (`- [x] Задание №N (3 балла)`); a CHANGES_REQUESTED review
-  without a task list accepts nothing. Each cell stores `accepted_score`
-  (teacher-accepted points) and `tasks` (per-task accepted / scored /
-  unscored states for the point-bearing tests). The page shows
-  `accepted_score` / autograder score and a colored square per task:
-  green = accepted, yellow = scored but not accepted, gray = 0 points; a
-  blue outline means a fix was pushed and is awaiting re-review.
+  without a task list rejects everything. Each cell stores `accepted_score`
+  (teacher-accepted points) and `tasks` (per-task states for the
+  point-bearing tests). The page shows `accepted_score` / autograder score
+  and a colored square per task: green = accepted, red = the review
+  rejected the task (на доработку), yellow = submitted and awaiting review
+  (first submission or a resubmitted fix), gray = auto-tests do not pass.
 - Each student gets `zachet`: pass when every past-due published assignment
   has at least 8 accepted points, fail otherwise, null (dash) when the
   student has no submissions at all.

@@ -15,9 +15,11 @@ such fixes are back "under review" until the teacher re-reviews. Writes
 Per-task acceptance (review-body task-list convention): an APPROVED review
 accepts every task the autograder scored; a CHANGES_REQUESTED review accepts
 exactly the tasks checked in its markdown task list ("- [x] Задание №N");
-a CHANGES_REQUESTED review without a task list accepts nothing. Each cell
-stores accepted_score (points the teacher has accepted so far) and tasks
-(per-task accepted/scored/unscored states for the point-bearing tests), and
+a CHANGES_REQUESTED review without a task list rejects everything. Each
+cell stores accepted_score (points the teacher has accepted so far) and
+tasks (per-task states for the point-bearing tests: accepted = counts
+toward accepted_score, rejected = the review rejected the task, pending =
+submitted and awaiting review, failed = auto-tests do not pass), and
 each student gets zachet (pass: every past-due assignment has at least
 PASS_THRESHOLD accepted points; fail; None = nothing submitted).
 
@@ -337,8 +339,10 @@ def main() -> int:
                 continue
             first = (row.get("first_name") or "").strip()
             last = (row.get("last_name") or "").strip()
-            # Display order: Last name First name (roster stores First Last).
-            names[username] = f"{last} {first}".strip()
+            # Display order: Last name First name (roster stores First Last),
+            # first token of first_name only - the patronymic is dropped from
+            # the status page per the teacher's request.
+            names[username] = f"{last} {(first.split() or [''])[0]}".strip()
             if (row.get("role") or "student") == "student":
                 roster_students.append(username)
             else:
@@ -426,7 +430,10 @@ def main() -> int:
             }
             scored = {t["n"]: test_scores.get(t["task"], 0) > 0 for t in tm}
 
-            # Per-task acceptance + accepted-point total. Task points are
+            # Per-task states: accepted (green) / rejected - the review
+            # rejected the task, ball with the student (red) / pending -
+            # submitted and awaiting review, first or resubmitted (yellow) /
+            # failed - auto-tests do not pass (gray). Task points are
             # always awarded fully or not at all, so an accepted task
             # contributes its full points from assignments.json.
             if (owner.lower(), slug) in overrides:
@@ -438,38 +445,50 @@ def main() -> int:
             elif state == "approved":
                 # Whole review accepted: every scored task is accepted.
                 tstates = {
-                    t["n"]: ("accepted" if scored[t["n"]] else "unscored")
+                    t["n"]: ("accepted" if scored[t["n"]] else "failed")
                     for t in tm
                 }
                 accepted_score = autograder_score or 0
-            elif state == "changes_requested" and accepted_tasks:
-                # Task-list convention: checked tasks are accepted.
-                tstates = {}
-                for t in tm:
-                    if t["n"] in accepted_tasks:
-                        if not scored[t["n"]]:
-                            print(
-                                f"warning: {CLASSROOM}-{slug}-{owner}: Задание №{t['n']}"
-                                " accepted but autograder scored 0",
-                                file=sys.stderr,
-                            )
-                        tstates[t["n"]] = "accepted"
-                    else:
-                        tstates[t["n"]] = "scored" if scored[t["n"]] else "unscored"
-                accepted_score = sum(t["points"] for t in tm if t["n"] in accepted_tasks)
-                ghost = accepted_tasks - {t["n"] for t in tm}
+            elif state == "changes_requested":
+                # Task-list convention: checked tasks are accepted, the rest
+                # are rejected. Without a list the whole assignment is
+                # rejected (all squares red). If the student already pushed
+                # a fix, the rejected tasks are back under review - yellow,
+                # same as a first submission (no special border).
+                if accepted_tasks:
+                    tstates = {}
+                    for t in tm:
+                        if t["n"] in accepted_tasks:
+                            if not scored[t["n"]]:
+                                print(
+                                    f"warning: {CLASSROOM}-{slug}-{owner}: Задание №{t['n']}"
+                                    " accepted but autograder scored 0",
+                                    file=sys.stderr,
+                                )
+                            tstates[t["n"]] = "accepted"
+                        else:
+                            tstates[t["n"]] = "rejected"
+                else:
+                    tstates = {t["n"]: "rejected" for t in tm}
+                accepted_score = sum(t["points"] for t in tm if tstates[t["n"]] == "accepted")
+                ghost = accepted_tasks - {t["n"] for t in tm} if accepted_tasks else set()
                 if ghost:
                     print(
                         f"warning: {CLASSROOM}-{slug}-{owner}: review task list"
                         f" references unknown tasks {sorted(ghost)}",
                         file=sys.stderr,
                     )
+                if fix_submitted:
+                    tstates = {
+                        n: ("pending" if s == "rejected" else s)
+                        for n, s in tstates.items()
+                    }
             else:
-                # unreviewed / unknown / closed / no_pr / CR without a task
-                # list: nothing accepted yet; squares show what the
-                # autograder scored.
+                # unreviewed / unknown / closed / no_pr: submitted but not
+                # reviewed yet - tests pass (yellow) or auto-tests fail
+                # (gray); nothing accepted yet.
                 tstates = {
-                    t["n"]: ("scored" if scored[t["n"]] else "unscored")
+                    t["n"]: ("pending" if scored[t["n"]] else "failed")
                     for t in tm
                 }
                 accepted_score = 0

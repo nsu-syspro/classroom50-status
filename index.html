@@ -23,8 +23,12 @@
   .legend { margin: 0 0 1rem; font-size: .85rem; color: var(--muted); }
   /* direct children only: a descendant selector would also hit the inner
      .split-text span of the legend demo badge and skew its split (extra
-     padding + margin made the blue half visibly wider) */
+     padding + margin made the blue half visibly wider). The .squares
+     override is needed because this rule (0,1,1) beats .squares (0,1,0):
+     flattened to inline-block, the demo grid's empty <i> squares collapse
+     to 0x0 and vanish. */
   .legend > span { display: inline-block; padding: 0 .5em; margin-right: .75em; border-radius: 3px; }
+  .legend > span.squares { display: inline-flex; padding: 0; margin-right: 0; border-radius: 0; }
   table { border-collapse: collapse; width: 100%; }
   th, td { border: 1px solid var(--line); padding: .35rem .6rem; text-align: left; }
   th { background: #f6f8fa; font-weight: 600; }
@@ -47,16 +51,17 @@
   .approved { background: var(--ok-bg); color: var(--ok); }
   .changes_requested { background: var(--bad-bg); color: var(--bad); }
   .unreviewed { background: var(--warn-bg); color: var(--warn); }
-  /* per-task acceptance grid: one square per point-bearing task,
-     green = accepted, yellow = autograder scored it but not accepted yet,
-     gray = no points from the autograder. Blue outline = a fix was pushed
-     after the changes-requested review (back "under review"). */
+  /* per-task grid: one square per point-bearing task, green = accepted,
+     red = the review rejected the task (на доработку), yellow = submitted
+     and awaiting review (first submission or a resubmission after a
+     changes-requested review - no special border), gray = auto-tests do
+     not pass. */
   .squares { display: inline-flex; gap: 2px; vertical-align: middle; }
   .squares i { width: 9px; height: 9px; border-radius: 2px; }
   .squares .accepted { background: var(--ok); }
-  .squares .scored { background: #d4a72c; }
-  .squares .unscored { background: #eaeef2; box-shadow: inset 0 0 0 1px var(--line); }
-  .squares.fix { outline: 2px solid #0969da; outline-offset: 1px; }
+  .squares .rejected { background: var(--bad); }
+  .squares .pending  { background: #d4a72c; }
+  .squares .failed   { background: #eaeef2; box-shadow: inset 0 0 0 1px var(--line); }
   .closed, .no_pr, .unknown, .none { background: #f6f8fa; color: var(--muted); }
   .missing { color: var(--na); text-align: center; }
   /* зачет column: green badge only when EVERY past-due assignment has at
@@ -103,6 +108,19 @@ function squareDemo(kind) {
   span.append(el("i", kind));
   return span;
 }
+
+/* Per-task square vocabulary (what generate_progress.py emits in cell.tasks
+   and what each square means) plus the legacy pre-backfill names. */
+const SQUARE_CLASS = {
+  accepted: "accepted", rejected: "rejected", pending: "pending", failed: "failed",
+  scored: "pending", unscored: "failed",
+};
+const SQUARE_TITLE = {
+  accepted: "Зачтено",
+  rejected: "На доработку",
+  pending: "Сдано, ожидает проверки",
+  failed: "Автотесты не проходят",
+};
 
 function fmtDate(iso) {
   if (!iso) return "";
@@ -197,9 +215,10 @@ async function renderClassroom(slug) {
   const legend = el("p", "legend");
   legend.append("Ячейка: зачтено / баллов автотеста. Квадраты: ");
   legend.append(squareDemo("accepted"), " зачтено · ");
-  legend.append(squareDemo("scored"), " на доработку · ");
-  legend.append(squareDemo("unscored"), " 0 баллов. ");
-  legend.append("Синяя рамка: исправление сдано, ждет повторной проверки. ");
+  legend.append(squareDemo("rejected"), " на доработку · ");
+  legend.append(squareDemo("pending"), " сдано, ожидает проверки · ");
+  legend.append(squareDemo("failed"), " автотесты не проходят. ");
+  legend.append(el("br"));
   legend.append("Зачет: все работы сданы не ниже чем на 8 принятых баллов. ");
   legend.append("Ссылка в ячейке ведёт на ваш pull request с решением.");
   app.append(legend);
@@ -254,11 +273,17 @@ async function renderClassroom(slug) {
       const review = (c.review === "changes_requested" && c.fix_submitted)
         ? "changes_requested_seen" : c.review;
       if (Array.isArray(c.tasks) && c.tasks.length) {
-        // per-task acceptance grid; tooltip keeps the review-state wording
+        // per-task squares; each square carries its own tooltip, the grid
+        // keeps the review-state wording. Pre-backfill data used the legacy
+        // state names scored/unscored - normalize them to the current ones.
         const squares = el("span", "squares");
-        if (c.fix_submitted) squares.classList.add("fix");
         squares.title = LEGEND_RU[review] || review;
-        for (const st of c.tasks) squares.append(el("i", st));
+        for (const st of c.tasks) {
+          const cls = SQUARE_CLASS[st] || st;
+          const sq = el("i", cls);
+          sq.title = SQUARE_TITLE[cls] || cls;
+          squares.append(sq);
+        }
         status.append(squares);
       } else {
         // legacy data without per-task states: fall back to the text badge

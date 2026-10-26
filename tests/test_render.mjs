@@ -66,13 +66,22 @@ data.cells[0].review = "changes_requested";
 data.cells[0].fix_submitted = true;
 data.cells[0].score = 10;
 data.cells[0].accepted_score = 4;
-data.cells[0].tasks = ["accepted", "accepted", "scored", "scored"];
+data.cells[0].tasks = ["accepted", "accepted", "pending", "pending"];
 if (data.cells[1]) {
   data.cells[1].review = "changes_requested";
   delete data.cells[1].fix_submitted;
   data.cells[1].score = 10;
   data.cells[1].accepted_score = 3;
-  data.cells[1].tasks = ["accepted", "unscored", "unscored", "unscored"];
+  data.cells[1].tasks = ["accepted", "rejected", "rejected", "rejected"];
+}
+if (data.cells[3]) {
+  // unreviewed submission: tests pass -> pending (yellow), tests fail ->
+  // failed (gray)
+  data.cells[3].review = "unreviewed";
+  data.cells[3].fix_submitted = false;
+  data.cells[3].score = 5;
+  delete data.cells[3].accepted_score;
+  data.cells[3].tasks = ["pending", "failed", "pending", "failed"];
 }
 if (data.cells[2]) {
   // legacy rendering path: a cell without per-task states falls back to the
@@ -91,15 +100,22 @@ await runView("?classroom=mpt", { "mpt/data/progress.json": data }, (text, doc) 
   ["mpt: no meta line under title", !doc.querySelector("p.meta")],
   ["mpt: legend text", text.includes("зачтено / баллов автотеста")],
   ["mpt: legend explains squares and zachet", text.includes("на доработку") && text.includes("Зачет")],
+  ["mpt: legend shows the four squares", doc.querySelectorAll(".legend .squares i").length === 4],
+  ["mpt: zachet part on its own line", !!doc.querySelector(".legend br")],
+  ["mpt: no blue-outline note", !text.includes("Синяя рамка")],
+  ["mpt: no blue outline on any grid", !doc.querySelector(".squares.fix")],
   ["mpt: zachet pass badge", !!doc.querySelector("td.zachet .badge.approved") && text.includes("зачет")],
   ["mpt: zachet fail badge", text.includes("незачет") && !!doc.querySelector("td.zachet .badge.changes_requested")],
   ["mpt: zachet dash when nothing submitted", !!doc.querySelector("td.zachet.missing")],
   ["mpt: squares grid rendered per task", doc.querySelectorAll(".squares i").length >= 8],
   ["mpt: green squares for accepted tasks", doc.querySelectorAll(".squares i.accepted").length >= 3],
-  ["mpt: yellow squares for scored-not-accepted", doc.querySelectorAll(".squares i.scored").length >= 1],
-  ["mpt: gray squares for unscored tasks", doc.querySelectorAll(".squares i.unscored").length >= 3],
-  ["mpt: fix_submitted squares outlined blue", !!doc.querySelector(".squares.fix")],
-  ["mpt: squares tooltip carries review wording", (() => {
+  ["mpt: red squares for rejected tasks", doc.querySelectorAll(".squares i.rejected").length >= 3],
+  ["mpt: yellow squares for tasks awaiting review", doc.querySelectorAll(".squares i.pending").length >= 4],
+  ["mpt: gray squares for failing auto-tests", doc.querySelectorAll(".squares i.failed").length >= 2],
+  ["mpt: fix_submitted shows pending squares, no outline", !doc.querySelector(".squares.fix")],
+  ["mpt: failed-square tooltip mentions auto-tests", [...doc.querySelectorAll("td .squares i.failed")].some(i => i.title.includes("Автотесты"))],
+  ["mpt: pending-square tooltip mentions awaiting review", [...doc.querySelectorAll("td .squares i.pending")].some(i => i.title.includes("ожидает проверки"))],
+  ["mpt: squares grid tooltip carries review wording", (() => {
     // order-independent: cells[] is assignment-major while the table is
     // row-major, so look for the wording among all grids, not by position
     const titles = [...doc.querySelectorAll("td .squares")].map(s => s.title);
@@ -108,7 +124,7 @@ await runView("?classroom=mpt", { "mpt/data/progress.json": data }, (text, doc) 
   ["mpt: accepted/autograder score format", text.includes("4/10") && text.includes("3/10")],
   ["mpt: legacy text badge for a cell without tasks", !!doc.querySelector("td .badge.approved")],
   ["mpt: no asterisk note in legend", !text.includes("Звёздочка")],
-  ["mpt: student names last-first", text.includes("Данилов Лев Антонович")],
+  ["mpt: student names last-first", text.includes("Данилов Лев")],
   ["mpt: nameless student last", (() => {
     const rows = [...doc.querySelectorAll("tbody tr")];
     const disp = rows.map(r => r.querySelector("td").textContent.trim());
