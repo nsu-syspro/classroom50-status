@@ -14,5 +14,8 @@
   "exclude_students": [
     "aleksiwithlove",
     "liontiger23"
+  ],
+  "overrides": [
+    { "student": "The-Durian-art", "assignment": "git-basics", "accepted": true }
   ]
 }

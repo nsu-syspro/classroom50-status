@@ -12,6 +12,15 @@ re-submitted after that review was posted, the cell gets fix_submitted=true:
 such fixes are back "under review" until the teacher re-reviews. Writes
 <classroom>/data/progress.json (schema nsu-syspro/progress/v1).
 
+Per-task acceptance (review-body task-list convention): an APPROVED review
+accepts every task the autograder scored; a CHANGES_REQUESTED review accepts
+exactly the tasks checked in its markdown task list ("- [x] Задание №N");
+a CHANGES_REQUESTED review without a task list accepts nothing. Each cell
+stores accepted_score (points the teacher has accepted so far) and tasks
+(per-task accepted/scored/unscored states for the point-bearing tests), and
+each student gets zachet (pass: every past-due assignment has at least
+PASS_THRESHOLD accepted points; fail; None = nothing submitted).
+
 Classroom knobs come from <classroom>/publish.json in this repo:
   {
     "enabled": true,               # master switch: publish this classroom
@@ -36,6 +45,7 @@ import csv
 import io
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -50,6 +60,18 @@ CONFIG_REPO = os.environ.get("PROGRESS_CONFIG_REPO", "classroom50")
 API = os.environ.get("GITHUB_API_URL", "https://api.github.com")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCHEMA = "nsu-syspro/progress/v1"
+
+# Зачет threshold: every assignment needs at least this many ACCEPTED points
+# (autograder points that the teacher has actually approved).
+PASS_THRESHOLD = 8
+
+# One item of the review-body task list convention for CHANGES_REQUESTED
+# verdicts, e.g. "- [x] Задание №3 (3 балла)". The number maps to the test
+# named "Task #N" in assignments.json; anything after the number is a comment.
+TASK_ITEM_RE = re.compile(
+    r"^\s*[-*+]\s+\[([ xX])\]\s*Задание\s*№?\s*(\d+)",
+    re.MULTILINE,
+)
 
 
 def die(msg: str, code: int = 1) -> None:
@@ -184,8 +206,8 @@ def select_assignments(entries: list[dict], knobs: dict, now: datetime,
     return out
 
 
-def review_state(slug: str, owner: str, latest_sub: str | None) -> tuple[str, bool, dict | None]:
-    """(review state, fix_submitted, last student comment) for one cell.
+def review_state(slug: str, owner: str, latest_sub: str | None) -> tuple[str, bool, dict | None, set[int] | None]:
+    """(review state, fix_submitted, last student comment, accepted tasks).
 
     fix_submitted is true when the last verdict on the PR is
     CHANGES_REQUESTED and the student's latest submission is newer than that
@@ -202,31 +224,48 @@ def review_state(slug: str, owner: str, latest_sub: str | None) -> tuple[str, bo
     latest comment authored by the student is returned as
     {at, body} (body whitespace-collapsed, truncated). None when the student
     never commented.
+
+    The fourth value carries per-task acceptance parsed from the deciding
+    review's body (review-body task-list convention):
+      - None: no per-task info (APPROVED = everything accepted; no_pr /
+        closed / unknown / plain unreviewed = nothing to parse);
+      - set of task numbers: CHANGES_REQUESTED; checked items are accepted,
+        everything else is not. An empty set means the CR review has no
+        task list at all, so no task point is accepted.
     """
     repo = f"{CLASSROOM}-{slug}-{owner}"
     status, body = api(f"repos/{ORG}/{repo}/pulls/1")
     if status == 404:
-        return "no_pr", False, None
+        return "no_pr", False, None, None
     if status != 200:
         print(f"warning: {repo} PR fetch: HTTP {status}", file=sys.stderr)
-        return "unknown", False, None
+        return "unknown", False, None, None
     pr_closed = json.loads(body).get("state") == "closed"
     status, body = api(f"repos/{ORG}/{repo}/pulls/1/reviews?per_page=100")
     if status != 200:
         print(f"warning: {repo} reviews fetch: HTTP {status}", file=sys.stderr)
-        return "unknown", False, None
+        return "unknown", False, None, None
     decision = "unreviewed"
     decision_at: str | None = None
+    decision_body = ""
     try:
         for review in json.loads(body):
             state = review.get("state")
             if state in ("APPROVED", "CHANGES_REQUESTED"):
                 decision = state.lower()
                 decision_at = review.get("submitted_at")
+                decision_body = review.get("body") or ""
     except json.JSONDecodeError:
-        return "unknown", False, None
+        return "unknown", False, None, None
     if decision == "unreviewed" and pr_closed:
-        return "closed", False, None      # PR closed without a verdict; nothing to review
+        return "closed", False, None, None      # PR closed without a verdict; nothing to review
+    accepted_tasks: set[int] | None = None
+    if decision == "changes_requested":
+        accepted_tasks = {
+            int(m.group(2))
+            for m in TASK_ITEM_RE.finditer(decision_body)
+            if m.group(1).strip()
+        }
     fix_submitted = bool(
         decision == "changes_requested"
         and latest_sub
@@ -257,7 +296,7 @@ def review_state(slug: str, owner: str, latest_sub: str | None) -> tuple[str, bo
                     "at": at,
                     "body": " ".join(text.split())[:120],
                 }
-    return decision, fix_submitted, last_student_comment
+    return decision, fix_submitted, last_student_comment, accepted_tasks
 
 
 def main() -> int:
@@ -307,6 +346,32 @@ def main() -> int:
 
     excluded = set(knobs.get("exclude_students") or []) | staff
 
+    # Manual verdict overrides: (lowercased username, assignment slug) cells
+    # where the teacher accepted the whole assignment without (or contrary
+    # to) the PR review state, e.g. a closed PR whose work was accepted.
+    overrides = {
+        (str(ov.get("student", "")).lower(), ov.get("assignment", ""))
+        for ov in (knobs.get("overrides") or [])
+        if ov.get("accepted", True)
+    }
+
+    # Point-bearing tests per assignment, in order; zero-point "setup" tests
+    # are not part of the per-task grid. Task number comes from the test name
+    # ("Task #N"), matching the "Задание №N" review-body task list.
+    task_meta: dict[str, list[dict]] = {}
+    for a in published:
+        meta = next((m for m in all_assignments if m["slug"] == a["slug"]), {})
+        lst = []
+        for t in meta.get("tests", []):
+            pts = int(t.get("points", 0) or 0)
+            if pts <= 0:
+                continue
+            name = t.get("name") or ""
+            m = re.match(r"Task\s*#?(\d+)$", name)
+            n = int(m.group(1)) if m else len(lst) + 1
+            lst.append({"task": name or f"Task #{n}", "n": n, "points": pts})
+        task_meta[a["slug"]] = lst
+
     # --- cells ---
     cells: list[dict] = []
     owners_seen: set[str] = set()
@@ -337,6 +402,7 @@ def main() -> int:
 
     for slug in sorted(published_slugs):
         bucket = scores.get(slug) or {}
+        tm = task_meta[slug]
         meta = next((a for a in all_assignments if a["slug"] == slug), {})
         assignment_max = sum(t.get("points", 0) for t in meta.get("tests", [])) or 10
         for entry in bucket.get("entries", []):
@@ -350,14 +416,71 @@ def main() -> int:
             # low score for anyone who re-submitted.
             subs = entry.get("submissions") or []
             latest = max(subs, key=lambda x: x.get("datetime") or "", default={})
-            state, fix_submitted, last_student_comment = states.get(
-                (slug, owner), ("unknown", False, None)
+            state, fix_submitted, last_student_comment, accepted_tasks = states.get(
+                (slug, owner), ("unknown", False, None, None)
             )
+            autograder_score = latest.get("score")
+            test_scores = {
+                t.get("test-name"): int(t.get("score", 0) or 0)
+                for t in (latest.get("tests") or [])
+            }
+            scored = {t["n"]: test_scores.get(t["task"], 0) > 0 for t in tm}
+
+            # Per-task acceptance + accepted-point total. Task points are
+            # always awarded fully or not at all, so an accepted task
+            # contributes its full points from assignments.json.
+            if (owner.lower(), slug) in overrides:
+                # Teacher accepted the whole assignment outside the PR.
+                tstates = {t["n"]: "accepted" for t in tm}
+                accepted_score = autograder_score
+                if accepted_score is None:
+                    accepted_score = sum(t["points"] for t in tm)
+            elif state == "approved":
+                # Whole review accepted: every scored task is accepted.
+                tstates = {
+                    t["n"]: ("accepted" if scored[t["n"]] else "unscored")
+                    for t in tm
+                }
+                accepted_score = autograder_score or 0
+            elif state == "changes_requested" and accepted_tasks:
+                # Task-list convention: checked tasks are accepted.
+                tstates = {}
+                for t in tm:
+                    if t["n"] in accepted_tasks:
+                        if not scored[t["n"]]:
+                            print(
+                                f"warning: {CLASSROOM}-{slug}-{owner}: Задание №{t['n']}"
+                                " accepted but autograder scored 0",
+                                file=sys.stderr,
+                            )
+                        tstates[t["n"]] = "accepted"
+                    else:
+                        tstates[t["n"]] = "scored" if scored[t["n"]] else "unscored"
+                accepted_score = sum(t["points"] for t in tm if t["n"] in accepted_tasks)
+                ghost = accepted_tasks - {t["n"] for t in tm}
+                if ghost:
+                    print(
+                        f"warning: {CLASSROOM}-{slug}-{owner}: review task list"
+                        f" references unknown tasks {sorted(ghost)}",
+                        file=sys.stderr,
+                    )
+            else:
+                # unreviewed / unknown / closed / no_pr / CR without a task
+                # list: nothing accepted yet; squares show what the
+                # autograder scored.
+                tstates = {
+                    t["n"]: ("scored" if scored[t["n"]] else "unscored")
+                    for t in tm
+                }
+                accepted_score = 0
+
             cell = {
                 "student": owner,
                 "assignment": slug,
-                "score": latest.get("score"),
+                "score": autograder_score,
                 "max_score": latest.get("max-score") or assignment_max,
+                "accepted_score": accepted_score,
+                "tasks": [tstates[t["n"]] for t in tm],
                 "review": state,
                 "fix_submitted": fix_submitted,
                 "pr_url": f"https://github.com/{ORG}/{CLASSROOM}-{slug}-{owner}/pull/1",
@@ -381,6 +504,25 @@ def main() -> int:
 
     students.sort(key=sort_key)
 
+    # Зачет: every past-due published assignment needs at least
+    # PASS_THRESHOLD accepted points. Students without a single submission
+    # get None (the page shows a dash); a missing cell counts as 0.
+    acc_by: dict[tuple[str, str], int] = {
+        (c["student"], c["assignment"]): c["accepted_score"] for c in cells
+    }
+    past_due = [
+        a["slug"] for a in published
+        if (d := parse_rfc3339(a.get("due") or "")) and d <= now
+    ]
+
+    def zachet_of(username: str) -> str | None:
+        if not any((username, slug) in acc_by for slug in past_due):
+            return None
+        for slug in past_due:
+            if acc_by.get((username, slug), 0) < PASS_THRESHOLD:
+                return "fail"
+        return "pass"
+
     doc = {
         "schema": SCHEMA,
         "classroom": CLASSROOM,
@@ -398,7 +540,8 @@ def main() -> int:
             for a in published
         ],
         "students": [
-            {"username": u, "display": names.get(u) or u} for u in students
+            {"username": u, "display": names.get(u) or u, "zachet": zachet_of(u)}
+            for u in students
         ],
         "cells": cells,
     }

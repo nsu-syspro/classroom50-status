@@ -22,9 +22,9 @@ const t1 = await runView("?classroom=mpt", "Обновлено:");
 check("LIVE mpt: rendered fully (footer present)", t1.includes("Обновлено:"));
 check("LIVE mpt: no [object artifacts", !t1.includes("[object"));
 check("LIVE mpt: classroom name from classroom50", t1.includes("Modern Programmer's Tools"));
-check("LIVE mpt: legend present", t1.includes("Оценки и статус проверки"));
+check("LIVE mpt: legend present", t1.includes("зачтено / баллов автотеста"));
 check("LIVE mpt: scores present", /\d+\/10/.test(t1));
-check("LIVE mpt: badge labels", t1.includes("проверено"));
+check("LIVE mpt: zachet column", t1.includes("Зачет"));
 
 const t2 = await runView("", "Modern Programmer's Tools");
 check("LIVE index: rendered fully", t2.includes("Modern Programmer's Tools"));

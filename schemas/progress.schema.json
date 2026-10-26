@@ -43,7 +43,11 @@
         "additionalProperties": false,
         "properties": {
           "username": { "type": "string" },
-          "display": { "type": "string", "description": "Full name from the roster, or the username as fallback." }
+          "display": { "type": "string", "description": "Full name from the roster, or the username as fallback." },
+          "zachet": {
+            "enum": ["pass", "fail", null],
+            "description": "Credit over all past-due published assignments: each needs at least PASS_THRESHOLD (8) accepted_score points. null = the student has no submissions at all (page shows a dash)."
+          }
         }
       }
     },
@@ -61,6 +65,16 @@
           "max_score": { "type": "integer", "minimum": 0 },
           "review": {
             "enum": ["approved", "changes_requested", "unreviewed", "closed", "no_pr", "unknown"]
+          },
+          "accepted_score": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Points the teacher has accepted so far. APPROVED review: the autograder total. CHANGES_REQUESTED: the sum of the full points of the tasks checked in the review body's task list (- [x] Задание №N); 0 when the review has no task list. 0 while unreviewed. Overridden to the full total for cells in publish.json 'overrides'."
+          },
+          "tasks": {
+            "type": "array",
+            "description": "Per-task acceptance states for the assignment's point-bearing tests (tests with points > 0, in task order; zero-point 'setup' tests excluded). accepted = counts toward accepted_score; scored = the autograder gave the task points but it is not accepted yet; unscored = the autograder gave the task 0 points.",
+            "items": { "enum": ["accepted", "scored", "unscored"] }
           },
           "fix_submitted": {
             "type": "boolean",

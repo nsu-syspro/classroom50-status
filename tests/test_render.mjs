@@ -59,31 +59,54 @@ await runView("", { "classrooms.json": classrooms }, (text, doc) => [
   ["index: classroom title from classroom50", text.includes("Modern Programmer's Tools")],
 ]);
 
-// --- fix_submitted badge: changes_requested + student re-submitted after
-// the review. Fixture-tolerant: force the first two cells into both
-// variants regardless of what the generated data currently holds.
+// --- per-task squares + зачет: fixture-tolerant. Force known shapes on the
+// first cells/students regardless of fixture freshness (the bot may still
+// serve old-format data without tasks/zachet fields).
 data.cells[0].review = "changes_requested";
 data.cells[0].fix_submitted = true;
+data.cells[0].score = 10;
+data.cells[0].accepted_score = 4;
+data.cells[0].tasks = ["accepted", "accepted", "scored", "scored"];
 if (data.cells[1]) {
   data.cells[1].review = "changes_requested";
   delete data.cells[1].fix_submitted;
+  data.cells[1].score = 10;
+  data.cells[1].accepted_score = 3;
+  data.cells[1].tasks = ["accepted", "unscored", "unscored", "unscored"];
 }
+if (data.cells[2]) {
+  // legacy rendering path: a cell without per-task states falls back to the
+  // text badge
+  data.cells[2].review = "approved";
+  delete data.cells[2].tasks;
+  delete data.cells[2].accepted_score;
+}
+data.students[0].zachet = "pass";
+if (data.students[1]) data.students[1].zachet = "fail";
+if (data.students[2]) delete data.students[2].zachet;
 
 // --- single classroom view ---
 await runView("?classroom=mpt", { "mpt/data/progress.json": data }, (text, doc) => [
   ["mpt: title with separator", (doc.querySelector("h1") || {}).textContent === "Modern Programmer's Tools \u00b7 NSU Sys.Pro"],
   ["mpt: no meta line under title", !doc.querySelector("p.meta")],
-  ["mpt: legend text", text.includes("Оценки и статус проверки")],
-  ["mpt: badges rendered with labels", text.includes("проверено") && text.includes("на проверке")],
-  ["mpt: fix_submitted cell: blue na-proverke badge, no asterisk", (() => {
-    const b = doc.querySelector("td .badge.changes_requested_seen");
-    return !!b && b.textContent === "на проверке" && !text.includes("на проверке*");
+  ["mpt: legend text", text.includes("зачтено / баллов автотеста")],
+  ["mpt: legend explains squares and zachet", text.includes("на доработку") && text.includes("Зачет")],
+  ["mpt: zachet pass badge", !!doc.querySelector("td.zachet .badge.approved") && text.includes("зачет")],
+  ["mpt: zachet fail badge", text.includes("незачет") && !!doc.querySelector("td.zachet .badge.changes_requested")],
+  ["mpt: zachet dash when nothing submitted", !!doc.querySelector("td.zachet.missing")],
+  ["mpt: squares grid rendered per task", doc.querySelectorAll(".squares i").length >= 8],
+  ["mpt: green squares for accepted tasks", doc.querySelectorAll(".squares i.accepted").length >= 3],
+  ["mpt: yellow squares for scored-not-accepted", doc.querySelectorAll(".squares i.scored").length >= 1],
+  ["mpt: gray squares for unscored tasks", doc.querySelectorAll(".squares i.unscored").length >= 3],
+  ["mpt: fix_submitted squares outlined blue", !!doc.querySelector(".squares.fix")],
+  ["mpt: squares tooltip carries review wording", (() => {
+    // order-independent: cells[] is assignment-major while the table is
+    // row-major, so look for the wording among all grids, not by position
+    const titles = [...doc.querySelectorAll("td .squares")].map(s => s.title);
+    return titles.includes("на проверке") && titles.includes("есть замечания");
   })()],
-  ["mpt: legend na-proverke badge is split two-color with gradient text", (() => {
-    const b = doc.querySelector(".legend .badge.seen-split");
-    return !!b && !!b.querySelector(".split-text") && b.querySelector(".split-text").textContent === "на проверке";
-  })()],
-  ["mpt: plain changes_requested badge intact in a cell", !!doc.querySelector("td .badge.changes_requested")],
+  ["mpt: accepted/autograder score format", text.includes("4/10") && text.includes("3/10")],
+  ["mpt: legacy text badge for a cell without tasks", !!doc.querySelector("td .badge.approved")],
   ["mpt: no asterisk note in legend", !text.includes("Звёздочка")],
   ["mpt: student names last-first", text.includes("Данилов Лев Антонович")],
   ["mpt: nameless student last", (() => {

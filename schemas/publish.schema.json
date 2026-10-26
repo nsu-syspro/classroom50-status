@@ -34,6 +34,20 @@
       "type": "array",
       "items": { "type": "string" },
       "description": "Usernames never shown on the page (e.g. dropped students). Staff roles on the roster are excluded automatically."
+    },
+    "overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["student", "assignment"],
+        "additionalProperties": false,
+        "properties": {
+          "student": { "type": "string", "description": "Username as in the roster (case-insensitive)." },
+          "assignment": { "type": "string", "description": "Assignment slug." },
+          "accepted": { "type": "boolean", "default": true, "description": "true = the teacher accepted the whole assignment outside the PR review flow (e.g. a closed PR whose work was accepted): every task square is green and accepted_score is the full autograder total (or the assignment maximum when no score was collected). false = no-op entry for documentation." }
+        }
+      },
+      "description": "Manual per-cell verdict overrides applied at generation time."
     }
   }
 }

@@ -32,37 +32,32 @@
   td.student { white-space: nowrap; }
   a { color: #0969da; text-decoration: none; }
   a:hover { text-decoration: underline; }
-  /* score · status : the dot is the fixed center of the column, the score is
-     right-aligned to its left and the status left-aligned to its right, so
-     all dots line up vertically regardless of text lengths */
+  /* score · squares: the dot is the fixed center of the column, the score
+     is right-aligned to its left and the per-task squares left-aligned to
+     its right, so all dots line up vertically regardless of text lengths */
   .cell { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .3rem; }
   .cell .score { text-align: right; white-space: nowrap; }
   .cell .dot { color: #8c959f; padding: 0 .1em; }
-  .cell .status { text-align: left;
-     /* uniform min-width: the dot x-position depends on the track's min-content
-        (longest word); pin it so wrapped labels ("PR закрыт", "есть замечания")
-        do not shift the dot vs one-line ones */
-     min-width: 4.95rem; }
+  .cell .status { text-align: left; }
   .badge { display: inline-block; padding: .05rem .45rem; border-radius: 3px; font-size: .78rem; }
   .approved { background: var(--ok-bg); color: var(--ok); }
   .changes_requested { background: var(--bad-bg); color: var(--bad); }
   .unreviewed { background: var(--warn-bg); color: var(--warn); }
-  /* "на проверке" for a fix submitted after a changes-requested review:
-     cells show it as the plain blue changes_requested_seen badge; the legend
-     demo badge splits yellow-to-blue. MUST come after .unreviewed: same
-     specificity, later rule wins. */
-  .changes_requested_seen { background: #ddf4ff; color: #0969da; }
-  .seen-split { background: linear-gradient(135deg, var(--warn-bg) 50%, #ddf4ff 50%); }
-  /* gradient text mirroring the badge's yellow/blue split (needs an inner
-     span: background-clip: text on the badge itself would eat its background) */
-  .seen-split .split-text {
-    background: linear-gradient(135deg, var(--warn) 50%, #0969da 50%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+  /* per-task acceptance grid: one square per point-bearing task,
+     green = accepted, yellow = autograder scored it but not accepted yet,
+     gray = no points from the autograder. Blue outline = a fix was pushed
+     after the changes-requested review (back "under review"). */
+  .squares { display: inline-flex; gap: 2px; vertical-align: middle; }
+  .squares i { width: 9px; height: 9px; border-radius: 2px; }
+  .squares .accepted { background: var(--ok); }
+  .squares .scored { background: #d4a72c; }
+  .squares .unscored { background: #eaeef2; box-shadow: inset 0 0 0 1px var(--line); }
+  .squares.fix { outline: 2px solid #0969da; outline-offset: 1px; }
   .closed, .no_pr, .unknown, .none { background: #f6f8fa; color: var(--muted); }
   .missing { color: var(--na); text-align: center; }
+  /* зачет column: green badge only when EVERY past-due assignment has at
+     least 8 accepted points; otherwise red; dash when nothing submitted */
+  .zachet { text-align: center; white-space: nowrap; }
   footer { margin-top: 1.5rem; color: var(--muted); font-size: .8rem; }
   .error { color: var(--bad); }
   /* classroom list view */
@@ -96,6 +91,13 @@ function el(tag, cls, text) {
   if (cls) node.className = cls;
   if (text != null) node.textContent = text;
   return node;
+}
+
+/* demo square for the legend: a one-square .squares grid of the given kind */
+function squareDemo(kind) {
+  const span = el("span", "squares");
+  span.append(el("i", kind));
+  return span;
 }
 
 function fmtDate(iso) {
@@ -189,17 +191,13 @@ async function renderClassroom(slug) {
   document.title = title;
   app.append(el("h1", null, title));
   const legend = el("p", "legend");
-  legend.append("Оценки и статус проверки: ");
-  legend.append(el("span", "badge approved", LEGEND_RU.approved));
-  legend.append(" ");
-  legend.append(el("span", "badge changes_requested", LEGEND_RU.changes_requested));
-  legend.append(" ");
-  const legendSplit = el("span", "badge unreviewed seen-split");
-  legendSplit.append(el("span", "split-text", LEGEND_RU.unreviewed));
-  legend.append(legendSplit);
-  legend.append(" ");
-  legend.append(el("span", "badge closed", LEGEND_RU.closed));
-  legend.append(". Ссылка в ячейке ведёт на ваш pull request с решением.");
+  legend.append("Ячейка: зачтено / баллов автотеста. Квадраты: ");
+  legend.append(squareDemo("accepted"), " зачтено · ");
+  legend.append(squareDemo("scored"), " на доработку · ");
+  legend.append(squareDemo("unscored"), " 0 баллов. ");
+  legend.append("Синяя рамка: исправление сдано, ждет повторной проверки. ");
+  legend.append("Зачет: все работы сданы не ниже чем на 8 принятых баллов. ");
+  legend.append("Ссылка в ячейке ведёт на ваш pull request с решением.");
   app.append(legend);
 
   const table = el("table");
@@ -208,6 +206,7 @@ async function renderClassroom(slug) {
 
   const headRow = el("tr");
   headRow.append(el("th", null, "Студент"));
+  headRow.append(el("th", null, "Зачет"));
   for (const a of data.assignments) {
     const th = el("th", null, a.name || a.slug);
     th.append(el("span", "due", "до " + fmtDate(a.due)));
@@ -221,24 +220,46 @@ async function renderClassroom(slug) {
   for (const s of data.students) {
     const tr = el("tr");
     tr.append(el("td", "student", s.display));
+    const ztd = el("td", "zachet");
+    if (s.zachet === "pass") {
+      ztd.append(el("span", "badge approved", "зачет"));
+    } else if (s.zachet === "fail") {
+      ztd.append(el("span", "badge changes_requested", "незачет"));
+    } else {
+      ztd.className = "zachet missing";
+      ztd.textContent = "—";
+    }
+    tr.append(ztd);
     for (const a of data.assignments) {
       const c = cells.get(s.username + "|" + a.slug);
       const td = el("td");
       if (!c) { td.className = "missing"; td.textContent = "—"; tr.append(td); continue; }
       const wrap = el("div", "cell");
+      const got = c.score != null ? c.score : 0;
+      const accepted = c.accepted_score != null ? c.accepted_score : got;
       const score = el("span", "score");
-      if (c.score == null) {
-        score.textContent = "0/" + a.max_score;
-      } else {
-        const link = el("a", null, c.score + "/" + a.max_score);
+      if (c.pr_url) {
+        const link = el("a", null, accepted + "/" + got);
         link.href = c.pr_url;
         score.append(link);
+      } else {
+        score.textContent = accepted + "/" + got;
       }
       wrap.append(score, el("span", "dot", "·"));
       const status = el("span", "status");
       const review = (c.review === "changes_requested" && c.fix_submitted)
         ? "changes_requested_seen" : c.review;
-      status.append(el("span", "badge " + review, LEGEND_RU[review] || review));
+      if (Array.isArray(c.tasks) && c.tasks.length) {
+        // per-task acceptance grid; tooltip keeps the review-state wording
+        const squares = el("span", "squares");
+        if (c.fix_submitted) squares.classList.add("fix");
+        squares.title = LEGEND_RU[review] || review;
+        for (const st of c.tasks) squares.append(el("i", st));
+        status.append(squares);
+      } else {
+        // legacy data without per-task states: fall back to the text badge
+        status.append(el("span", "badge " + review, LEGEND_RU[review] || review));
+      }
       wrap.append(status);
       td.append(wrap);
       tr.append(td);

@@ -108,6 +108,23 @@ Set `"enabled": false` in its `publish.json`. It drops out of the matrix
   runs, not in the commit log.
 - Review states (проверено / есть замечания / на проверке) are fetched live
   from the Feedback PRs at generation time.
+- Per-task acceptance follows the review-body task-list convention: an
+  APPROVED review accepts every task the autograder scored; a
+  CHANGES_REQUESTED review accepts exactly the tasks checked in its markdown
+  task list (`- [x] Задание №N (3 балла)`); a CHANGES_REQUESTED review
+  without a task list accepts nothing. Each cell stores `accepted_score`
+  (teacher-accepted points) and `tasks` (per-task accepted / scored /
+  unscored states for the point-bearing tests). The page shows
+  `accepted_score` / autograder score and a colored square per task:
+  green = accepted, yellow = scored but not accepted, gray = 0 points; a
+  blue outline means a fix was pushed and is awaiting re-review.
+- Each student gets `zachet`: pass when every past-due published assignment
+  has at least 8 accepted points, fail otherwise, null (dash) when the
+  student has no submissions at all.
+- Manual verdict overrides live in `publish.json` (`overrides`, see
+  `schemas/publish.schema.json`): (student, assignment) cells where the
+  teacher accepted the whole assignment outside the PR flow (e.g. a closed
+  PR whose work was accepted) are treated as fully accepted.
 
 ## Validation and tests
 
