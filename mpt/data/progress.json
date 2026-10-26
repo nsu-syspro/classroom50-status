@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-26T03:26:04Z",
+ "generated_at": "2026-10-26T05:16:10Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-25T20:16:05Z",
+   "collected_at": "2026-10-26T05:16:03Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-25T20:16:05Z",
+   "collected_at": "2026-10-26T05:16:03Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-25T20:16:05Z",
+   "collected_at": "2026-10-26T05:16:03Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-25T20:16:05Z",
+   "collected_at": "2026-10-26T05:16:03Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-25T20:16:05Z",
+   "collected_at": "2026-10-26T05:16:03Z",
    "submitted": 19
   },
   {
@@ -49,7 +49,7 @@
    "name": "Automation basics",
    "due": "2026-10-16T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-25T20:16:05Z",
+   "collected_at": "2026-10-26T05:16:03Z",
    "submitted": 16
   },
   {
@@ -57,78 +57,95 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-25T20:16:05Z",
+   "collected_at": "2026-10-26T05:16:03Z",
    "submitted": 17
   }
  ],
  "students": [
   {
    "username": "The-Durian-art",
-   "display": "Артес Дэннис Андреевич"
+   "display": "Артес Дэннис Андреевич",
+   "zachet": "fail"
   },
   {
    "username": "Semex37",
-   "display": "Голоколос Семён Максимович"
+   "display": "Голоколос Семён Максимович",
+   "zachet": "pass"
   },
   {
    "username": "mrygrz8",
-   "display": "Грозная Мария Игоревна"
+   "display": "Грозная Мария Игоревна",
+   "zachet": "pass"
   },
   {
    "username": "Liondwap",
-   "display": "Данилов Лев Антонович"
+   "display": "Данилов Лев Антонович",
+   "zachet": "pass"
   },
   {
    "username": "semka39",
-   "display": "Дружинин Семён Владимирович"
+   "display": "Дружинин Семён Владимирович",
+   "zachet": "pass"
   },
   {
    "username": "vladimir212455",
-   "display": "Мазный Владимир Юрьевич"
+   "display": "Мазный Владимир Юрьевич",
+   "zachet": "pass"
   },
   {
    "username": "reznya213",
-   "display": "Мирошников Глеб Георгиевич"
+   "display": "Мирошников Глеб Георгиевич",
+   "zachet": "pass"
   },
   {
    "username": "catinhat01",
-   "display": "Обогрелов Илья Павлович"
+   "display": "Обогрелов Илья Павлович",
+   "zachet": "pass"
   },
   {
    "username": "dominik-DeKoko",
-   "display": "Пуртов Кирилл Васильевич"
+   "display": "Пуртов Кирилл Васильевич",
+   "zachet": "fail"
   },
   {
    "username": "KycokXleba",
-   "display": "Санжаров Михаил Александрович"
+   "display": "Санжаров Михаил Александрович",
+   "zachet": "fail"
   },
   {
    "username": "Aokdi",
-   "display": "Стыпник Святослав Вячеславович"
+   "display": "Стыпник Святослав Вячеславович",
+   "zachet": "fail"
   },
   {
    "username": "Lavandamosh",
-   "display": "Фадеенко Илья Олегович"
+   "display": "Фадеенко Илья Олегович",
+   "zachet": "fail"
   },
   {
    "username": "vebeta",
-   "display": "Хегай Владислав Александрович"
+   "display": "Хегай Владислав Александрович",
+   "zachet": "fail"
   },
   {
    "username": "FunnyGlupik",
-   "display": "Чепурченко Григорий Викторович"
+   "display": "Чепурченко Григорий Викторович",
+   "zachet": "fail"
   },
   {
    "username": "Bimbusick",
-   "display": "Шелепов Кирилл Игоревич"
+   "display": "Шелепов Кирилл Игоревич",
+   "zachet": "pass"
   },
   {
    "username": "grommoott",
-   "display": "Шуваев Григорий Алексеевич"
+   "display": "Шуваев Григорий Алексеевич",
+   "zachet": "pass"
   },
   {
    "username": "vikxxie",
-   "display": "vikxxie"
+   "display": "vikxxie",
+   "zachet": "fail"
   }
  ],
  "cells": [
@@ -137,6 +154,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-vladimir212455/pull/1",
@@ -151,6 +175,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-grommoott/pull/1",
@@ -165,6 +196,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-mrygrz8/pull/1",
@@ -175,6 +213,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-Semex37/pull/1",
@@ -185,6 +230,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-catinhat01/pull/1",
@@ -195,6 +247,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "scored",
+    "scored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-KycokXleba/pull/1",
@@ -205,6 +264,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-semka39/pull/1",
@@ -215,6 +281,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-Bimbusick/pull/1",
@@ -225,6 +298,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-Liondwap/pull/1",
@@ -235,6 +315,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "scored",
+    "scored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-vebeta/pull/1",
@@ -245,6 +332,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "scored",
+    "scored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-Aokdi/pull/1",
@@ -255,6 +349,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 7,
+   "tasks": [
+    "accepted",
+    "scored",
+    "accepted",
+    "accepted"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-The-Durian-art/pull/1",
@@ -265,6 +366,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-reznya213/pull/1",
@@ -275,6 +383,13 @@
    "assignment": "automation-basics",
    "score": 9,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "scored",
+    "unscored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-dominik-DeKoko/pull/1",
@@ -285,6 +400,13 @@
    "assignment": "automation-basics",
    "score": 9,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "scored",
+    "unscored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-FunnyGlupik/pull/1",
@@ -295,6 +417,13 @@
    "assignment": "automation-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "scored",
+    "scored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-Lavandamosh/pull/1",
@@ -305,6 +434,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-vladimir212455/pull/1",
@@ -315,6 +451,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-Semex37/pull/1",
@@ -325,6 +468,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-semka39/pull/1",
@@ -339,6 +489,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-catinhat01/pull/1",
@@ -349,6 +506,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-dominik-DeKoko/pull/1",
@@ -359,6 +523,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-reznya213/pull/1",
@@ -369,6 +540,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-Lavandamosh/pull/1",
@@ -379,6 +557,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "scored",
+    "scored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-KycokXleba/pull/1",
@@ -389,6 +574,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-grommoott/pull/1",
@@ -399,6 +591,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-Liondwap/pull/1",
@@ -409,6 +608,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-vebeta/pull/1",
@@ -419,6 +625,13 @@
    "assignment": "bash-basics",
    "score": 8,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "unscored",
+    "scored",
+    "scored",
+    "scored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-Aokdi/pull/1",
@@ -429,6 +642,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-vikxxie/pull/1",
@@ -439,6 +659,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-mrygrz8/pull/1",
@@ -449,6 +676,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-Bimbusick/pull/1",
@@ -459,6 +693,13 @@
    "assignment": "bash-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-The-Durian-art/pull/1",
@@ -469,6 +710,13 @@
    "assignment": "bash-basics",
    "score": 0,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "unscored",
+    "unscored",
+    "unscored",
+    "unscored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-bash-basics-FunnyGlupik/pull/1",
@@ -483,6 +731,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-KycokXleba/pull/1",
@@ -493,6 +747,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-semka39/pull/1",
@@ -507,6 +767,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-grommoott/pull/1",
@@ -517,6 +783,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-vladimir212455/pull/1",
@@ -527,6 +799,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-Liondwap/pull/1",
@@ -537,6 +815,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-The-Durian-art/pull/1",
@@ -547,6 +831,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-vikxxie/pull/1",
@@ -557,6 +847,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-mrygrz8/pull/1",
@@ -567,6 +863,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-reznya213/pull/1",
@@ -577,6 +879,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-Semex37/pull/1",
@@ -587,6 +895,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-catinhat01/pull/1",
@@ -597,6 +911,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-dominik-DeKoko/pull/1",
@@ -607,6 +927,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-Lavandamosh/pull/1",
@@ -617,6 +943,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-Bimbusick/pull/1",
@@ -627,6 +959,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-Aokdi/pull/1",
@@ -637,6 +975,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-FunnyGlupik/pull/1",
@@ -647,6 +991,12 @@
    "assignment": "command-line-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-command-line-basics-vebeta/pull/1",
@@ -657,6 +1007,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-KycokXleba/pull/1",
@@ -667,6 +1024,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-semka39/pull/1",
@@ -677,6 +1041,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-grommoott/pull/1",
@@ -687,6 +1058,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vladimir212455/pull/1",
@@ -697,6 +1075,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-Liondwap/pull/1",
@@ -707,6 +1092,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "scored",
+    "scored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vebeta/pull/1",
@@ -717,6 +1109,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-mrygrz8/pull/1",
@@ -727,6 +1126,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-reznya213/pull/1",
@@ -737,6 +1143,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-Semex37/pull/1",
@@ -747,6 +1160,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-catinhat01/pull/1",
@@ -757,6 +1177,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-Lavandamosh/pull/1",
@@ -767,6 +1194,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 4,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "scored",
+    "scored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-The-Durian-art/pull/1",
@@ -777,6 +1211,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vikxxie/pull/1",
@@ -787,6 +1228,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-Bimbusick/pull/1",
@@ -797,6 +1245,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-Aokdi/pull/1",
@@ -807,6 +1262,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-dominik-DeKoko/pull/1",
@@ -817,6 +1279,13 @@
    "assignment": "encoding-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-FunnyGlupik/pull/1",
@@ -827,6 +1296,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-vladimir212455/pull/1",
@@ -837,6 +1312,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Semex37/pull/1",
@@ -847,6 +1328,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-dominik-DeKoko/pull/1",
@@ -857,6 +1344,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-grommoott/pull/1",
@@ -867,6 +1360,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Liondwap/pull/1",
@@ -877,6 +1376,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "closed",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-The-Durian-art/pull/1",
@@ -887,6 +1392,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-vikxxie/pull/1",
@@ -897,6 +1408,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-mrygrz8/pull/1",
@@ -907,6 +1424,12 @@
    "assignment": "git-basics",
    "score": 6,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "unscored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-KycokXleba/pull/1",
@@ -917,6 +1440,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-semka39/pull/1",
@@ -927,6 +1456,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Bimbusick/pull/1",
@@ -937,6 +1472,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-vebeta/pull/1",
@@ -947,6 +1488,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Aokdi/pull/1",
@@ -957,6 +1504,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-reznya213/pull/1",
@@ -967,6 +1520,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-catinhat01/pull/1",
@@ -977,6 +1536,12 @@
    "assignment": "git-basics",
    "score": 6,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "unscored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-FunnyGlupik/pull/1",
@@ -987,6 +1552,12 @@
    "assignment": "git-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-Lavandamosh/pull/1",
@@ -997,6 +1568,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-vladimir212455/pull/1",
@@ -1007,6 +1585,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-KycokXleba/pull/1",
@@ -1017,6 +1602,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-grommoott/pull/1",
@@ -1027,6 +1619,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-semka39/pull/1",
@@ -1037,6 +1636,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-Bimbusick/pull/1",
@@ -1047,6 +1653,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-Liondwap/pull/1",
@@ -1057,6 +1670,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "scored",
+    "scored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-vebeta/pull/1",
@@ -1067,6 +1687,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-The-Durian-art/pull/1",
@@ -1077,6 +1704,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-mrygrz8/pull/1",
@@ -1087,6 +1721,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-catinhat01/pull/1",
@@ -1097,6 +1738,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "scored",
+    "scored",
+    "scored"
+   ],
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-dominik-DeKoko/pull/1",
@@ -1107,6 +1755,13 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-Lavandamosh/pull/1",
@@ -1117,6 +1772,13 @@
    "assignment": "markup-basics",
    "score": 9,
    "max_score": 10,
+   "accepted_score": 9,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "unscored"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-reznya213/pull/1",
@@ -1127,7 +1789,14 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "unreviewed",
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
+   "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-Aokdi/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-aokdi/releases/tag/submit%2F2026-10-24T19-00-45Z-da78ad5"
@@ -1137,8 +1806,15 @@
    "assignment": "markup-basics",
    "score": 10,
    "max_score": 10,
-   "review": "changes_requested",
-   "fix_submitted": true,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
+   "review": "approved",
+   "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-Semex37/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-semex37/releases/tag/submit%2F2026-10-24T17-31-28Z-7fc2631"
   },
@@ -1147,7 +1823,14 @@
    "assignment": "markup-basics",
    "score": 7,
    "max_score": 10,
-   "review": "unreviewed",
+   "accepted_score": 0,
+   "tasks": [
+    "scored",
+    "unscored",
+    "scored",
+    "scored"
+   ],
+   "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-FunnyGlupik/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-funnyglupik/releases/tag/submit%2F2026-10-25T16-45-20Z-86d05c8"
@@ -1157,6 +1840,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-vladimir212455/pull/1",
@@ -1167,6 +1858,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-catinhat01/pull/1",
@@ -1177,6 +1876,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-grommoott/pull/1",
@@ -1187,6 +1894,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-Liondwap/pull/1",
@@ -1197,6 +1912,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-vikxxie/pull/1",
@@ -1207,6 +1930,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-mrygrz8/pull/1",
@@ -1217,6 +1948,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-Semex37/pull/1",
@@ -1227,6 +1966,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-Lavandamosh/pull/1",
@@ -1237,6 +1984,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-KycokXleba/pull/1",
@@ -1247,6 +2002,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-semka39/pull/1",
@@ -1257,6 +2020,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-Bimbusick/pull/1",
@@ -1267,6 +2038,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-vebeta/pull/1",
@@ -1277,6 +2056,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-Aokdi/pull/1",
@@ -1287,6 +2074,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-The-Durian-art/pull/1",
@@ -1301,6 +2096,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-reznya213/pull/1",
@@ -1311,6 +2114,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-dominik-DeKoko/pull/1",
@@ -1321,6 +2132,14 @@
    "assignment": "regex-basics",
    "score": 10,
    "max_score": 10,
+   "accepted_score": 10,
+   "tasks": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted",
+    "accepted"
+   ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-regex-basics-FunnyGlupik/pull/1",
