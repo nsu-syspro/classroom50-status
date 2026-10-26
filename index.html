@@ -55,7 +55,8 @@
      red = the review rejected the task (на доработку), yellow = submitted
      and awaiting review (first submission or a resubmission after a
      changes-requested review - no special border), gray = auto-tests do
-     not pass. */
+     not pass. Pending uses the lighter #e3b341: against #d4a72c the
+     green-yellow luminance gap was too small. */
   .squares { display: inline-flex; gap: 2px; vertical-align: middle; }
   .squares i { width: 9px; height: 9px; border-radius: 2px; }
   /* green square uses the lighter #3fb950, not var(--ok) #1a7f37: the two
@@ -64,7 +65,7 @@
      badges keep --ok for contrast on their light backgrounds. */
   .squares .accepted { background: #3fb950; }
   .squares .rejected { background: var(--bad); }
-  .squares .pending  { background: #d4a72c; }
+  .squares .pending  { background: #e3b341; }
   .squares .failed   { background: #eaeef2; box-shadow: inset 0 0 0 1px var(--line); }
   .closed, .no_pr, .unknown, .none { background: #f6f8fa; color: var(--muted); }
   .missing { color: var(--na); text-align: center; }
