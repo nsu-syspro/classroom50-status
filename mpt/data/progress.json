@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-10-26T06:03:04Z",
+ "generated_at": "2026-10-26T06:27:19Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T06:02:47Z",
+   "collected_at": "2026-10-26T06:27:00Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T06:02:47Z",
+   "collected_at": "2026-10-26T06:27:00Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T06:02:47Z",
+   "collected_at": "2026-10-26T06:27:00Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T06:02:47Z",
+   "collected_at": "2026-10-26T06:27:00Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T06:02:47Z",
+   "collected_at": "2026-10-26T06:27:00Z",
    "submitted": 19
   },
   {
@@ -49,7 +49,7 @@
    "name": "Automation basics",
    "due": "2026-10-16T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T06:02:47Z",
+   "collected_at": "2026-10-26T06:27:00Z",
    "submitted": 16
   },
   {
@@ -57,7 +57,7 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-10-26T06:02:47Z",
+   "collected_at": "2026-10-26T06:27:00Z",
    "submitted": 17
   }
  ],
@@ -388,7 +388,7 @@
     "accepted",
     "rejected",
     "accepted",
-    "rejected"
+    "failed"
    ],
    "review": "changes_requested",
    "fix_submitted": false,
@@ -405,7 +405,7 @@
     "accepted",
     "rejected",
     "accepted",
-    "rejected"
+    "failed"
    ],
    "review": "changes_requested",
    "fix_submitted": false,
@@ -627,7 +627,7 @@
    "max_score": 10,
    "accepted_score": 8,
    "tasks": [
-    "rejected",
+    "failed",
     "accepted",
     "accepted",
     "accepted"
@@ -712,10 +712,10 @@
    "max_score": 10,
    "accepted_score": 0,
    "tasks": [
-    "rejected",
-    "rejected",
-    "rejected",
-    "rejected"
+    "failed",
+    "failed",
+    "failed",
+    "failed"
    ],
    "review": "changes_requested",
    "fix_submitted": false,
@@ -1428,7 +1428,7 @@
    "tasks": [
     "accepted",
     "accepted",
-    "rejected"
+    "failed"
    ],
    "review": "changes_requested",
    "fix_submitted": false,
@@ -1540,7 +1540,7 @@
    "tasks": [
     "accepted",
     "accepted",
-    "rejected"
+    "failed"
    ],
    "review": "changes_requested",
    "fix_submitted": false,
@@ -1826,7 +1826,7 @@
    "accepted_score": 7,
    "tasks": [
     "accepted",
-    "rejected",
+    "failed",
     "accepted",
     "accepted"
    ],
