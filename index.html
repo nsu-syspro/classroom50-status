@@ -58,7 +58,11 @@
      not pass. */
   .squares { display: inline-flex; gap: 2px; vertical-align: middle; }
   .squares i { width: 9px; height: 9px; border-radius: 2px; }
-  .squares .accepted { background: var(--ok); }
+  /* green square uses the lighter #3fb950, not var(--ok) #1a7f37: the two
+     darks have almost equal luminance (~1.05:1 WCAG), so green-red
+     neighbors blur together; #3fb950 lifts the ratio to ~2.1:1. Text
+     badges keep --ok for contrast on their light backgrounds. */
+  .squares .accepted { background: #3fb950; }
   .squares .rejected { background: var(--bad); }
   .squares .pending  { background: #d4a72c; }
   .squares .failed   { background: #eaeef2; box-shadow: inset 0 0 0 1px var(--line); }
