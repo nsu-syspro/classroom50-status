@@ -18,8 +18,10 @@ exactly the tasks checked in its markdown task list ("- [x] Задание №N"
 a CHANGES_REQUESTED review without a task list rejects everything. Each
 cell stores accepted_score (points the teacher has accepted so far) and
 tasks (per-task states for the point-bearing tests: accepted = counts
-toward accepted_score, rejected = the review rejected the task, pending =
-submitted and awaiting review, failed = auto-tests do not pass), and
+toward accepted_score even when the auto-tests score 0, rejected = the
+review rejected the task and its auto-tests pass, pending = submitted and
+awaiting review, failed = auto-tests do not pass, including unchecked
+tasks the autograder scored 0), and
 each student gets zachet (pass: every past-due assignment has at least
 PASS_THRESHOLD accepted points; fail; None = nothing submitted).
 
@@ -450,11 +452,16 @@ def main() -> int:
                 }
                 accepted_score = autograder_score or 0
             elif state == "changes_requested":
-                # Task-list convention: checked tasks are accepted, the rest
-                # are rejected. Without a list the whole assignment is
-                # rejected (all squares red). If the student already pushed
-                # a fix, the rejected tasks are back under review - yellow,
-                # same as a first submission (no special border).
+                # Task-list convention: checked tasks are accepted even if
+                # the autograder scored 0 (the teacher's call overrides).
+                # Unchecked tasks are red (rejected, ball with the student)
+                # only when their auto-tests pass; when the auto-tests give
+                # 0 the square stays gray - the task has not reached the
+                # reviewable bar (e.g. mpt-bash-basics-FunnyGlupik: scripts
+                # not executable, 0/10 -> all gray). Without a task list
+                # the same rule applies to every task. If the student
+                # already pushed a fix, the rejected tasks are back under
+                # review - yellow, same as a first submission.
                 if accepted_tasks:
                     tstates = {}
                     for t in tm:
@@ -467,9 +474,12 @@ def main() -> int:
                                 )
                             tstates[t["n"]] = "accepted"
                         else:
-                            tstates[t["n"]] = "rejected"
+                            tstates[t["n"]] = ("rejected" if scored[t["n"]] else "failed")
                 else:
-                    tstates = {t["n"]: "rejected" for t in tm}
+                    tstates = {
+                        t["n"]: ("rejected" if scored[t["n"]] else "failed")
+                        for t in tm
+                    }
                 accepted_score = sum(t["points"] for t in tm if tstates[t["n"]] == "accepted")
                 ghost = accepted_tasks - {t["n"] for t in tm} if accepted_tasks else set()
                 if ghost:

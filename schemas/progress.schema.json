@@ -73,7 +73,7 @@
           },
           "tasks": {
             "type": "array",
-            "description": "Per-task states for the assignment's point-bearing tests (tests with points > 0, in task order; zero-point 'setup' tests excluded). accepted = counts toward accepted_score (green); rejected = the review rejected the task, ball with the student (red); pending = submitted and awaiting review, first submission or resubmitted fix (yellow); failed = auto-tests do not pass (gray).",
+            "description": "Per-task states for the assignment's point-bearing tests (tests with points > 0, in task order; zero-point 'setup' tests excluded). accepted = counts toward accepted_score (green), even when the auto-tests score 0; rejected = the review rejected the task and its auto-tests pass, ball with the student (red); pending = submitted and awaiting review, first submission or resubmitted fix (yellow); failed = auto-tests do not pass (gray), including tasks unchecked by a review whose auto-tests score 0.",
             "items": { "enum": ["accepted", "rejected", "pending", "failed"] }
           },
           "fix_submitted": {

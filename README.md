@@ -116,8 +116,10 @@ Set `"enabled": false` in its `publish.json`. It drops out of the matrix
   (teacher-accepted points) and `tasks` (per-task states for the
   point-bearing tests). The page shows `accepted_score` / autograder score
   and a colored square per task: green = accepted, red = the review
-  rejected the task (на доработку), yellow = submitted and awaiting review
-  (first submission or a resubmitted fix), gray = auto-tests do not pass.
+  rejected the task and its auto-tests pass (на доработку), yellow =
+  submitted and awaiting review (first submission or a resubmitted fix),
+  gray = auto-tests do not pass (also for review-rejected tasks the
+  autograder scored 0 - they have not reached the reviewable bar).
 - Each student gets `zachet`: pass when every past-due published assignment
   has at least 8 accepted points, fail otherwise, null (dash) when the
   student has no submissions at all.
