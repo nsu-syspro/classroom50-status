@@ -34,6 +34,22 @@
   th { background: #f6f8fa; font-weight: 600; }
   th .due { display: block; font-weight: 400; font-size: .75rem; color: var(--muted); }
   td.student { white-space: nowrap; }
+  /* narrow screens: the table scrolls horizontally inside .table-wrap and
+     the student column stays pinned so the rows keep their labels while
+     the assignment columns slide under it */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  th:first-child, td.student { position: sticky; left: 0; z-index: 1; }
+  th:first-child { background: #f6f8fa; }
+  td.student { background: var(--bg); }
+  @media (max-width: 720px) {
+    body { padding: .75rem; }
+    th, td { padding: .25rem .3rem; font-size: .85rem; }
+    th .due { font-size: .68rem; }
+    table { width: max-content; min-width: 100%; }
+    .cell { gap: .2rem; }
+    .squares i { width: 7px; height: 7px; }
+    .legend { font-size: .78rem; }
+  }
   a { color: #0969da; text-decoration: none; }
   a:hover { text-decoration: underline; }
   /* score · squares: the dot is the fixed center of the column, the score
@@ -302,7 +318,9 @@ async function renderClassroom(slug) {
     tbody.append(tr);
   }
   table.append(thead, tbody);
-  app.append(table);
+  const twrap = el("div", "table-wrap");
+  twrap.append(table);
+  app.append(twrap);
 
   // footer: last refresh date + failure indicator, fetched LIVE from the
   // public Actions API (no commit needed for timestamps)
