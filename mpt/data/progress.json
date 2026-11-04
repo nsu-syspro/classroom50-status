@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-11-04T08:29:42Z",
+ "generated_at": "2026-11-04T20:15:05Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-04T08:29:34Z",
+   "collected_at": "2026-11-04T20:14:52Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-04T08:29:34Z",
+   "collected_at": "2026-11-04T20:14:52Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-04T08:29:34Z",
+   "collected_at": "2026-11-04T20:14:52Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-04T08:29:34Z",
+   "collected_at": "2026-11-04T20:14:52Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-04T08:29:34Z",
+   "collected_at": "2026-11-04T20:14:52Z",
    "submitted": 19
   },
   {
@@ -49,7 +49,7 @@
    "name": "Automation basics",
    "due": "2026-10-16T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-04T08:29:34Z",
+   "collected_at": "2026-11-04T20:14:52Z",
    "submitted": 16
   },
   {
@@ -57,7 +57,7 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-04T08:29:34Z",
+   "collected_at": "2026-11-04T20:14:52Z",
    "submitted": 17
   }
  ],
@@ -318,14 +318,14 @@
    "accepted_score": 7,
    "tasks": [
     "accepted",
-    "rejected",
+    "pending",
     "accepted",
     "accepted"
    ],
    "review": "changes_requested",
-   "fix_submitted": false,
+   "fix_submitted": true,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-vebeta/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-vebeta/releases/tag/submit%2F2026-10-17T04-04-31Z-a94d41e"
+   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-vebeta/releases/tag/submit%2F2026-11-04T13-01-39Z-123ccf7"
   },
   {
    "student": "Aokdi",
@@ -403,19 +403,19 @@
    "accepted_score": 6,
    "tasks": [
     "accepted",
-    "rejected",
+    "pending",
     "accepted",
     "failed"
    ],
    "review": "changes_requested",
-   "fix_submitted": false,
+   "fix_submitted": true,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-FunnyGlupik/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-funnyglupik/releases/tag/submit%2F2026-10-17T04-02-58Z-2ff7fd0"
+   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-funnyglupik/releases/tag/submit%2F2026-11-04T15-26-11Z-0f41c5e"
   },
   {
    "student": "Lavandamosh",
    "assignment": "automation-basics",
-   "score": 1,
+   "score": 4,
    "max_score": 10,
    "accepted_score": 7,
    "tasks": [
@@ -427,7 +427,7 @@
    "review": "changes_requested",
    "fix_submitted": true,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-Lavandamosh/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-lavandamosh/releases/tag/submit%2F2026-11-04T07-42-49Z-e6d7a5f"
+   "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-lavandamosh/releases/tag/submit%2F2026-11-04T08-56-21Z-604dcca"
   },
   {
    "student": "vladimir212455",
@@ -1090,19 +1090,19 @@
   {
    "student": "vebeta",
    "assignment": "encoding-basics",
-   "score": 7,
+   "score": 10,
    "max_score": 10,
    "accepted_score": 7,
    "tasks": [
     "accepted",
     "accepted",
-    "failed",
+    "pending",
     "accepted"
    ],
    "review": "changes_requested",
    "fix_submitted": true,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vebeta/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vebeta/releases/tag/submit%2F2026-10-30T17-38-40Z-f92990b"
+   "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-vebeta/releases/tag/submit%2F2026-11-04T12-08-36Z-78a3349"
   },
   {
    "student": "mrygrz8",
@@ -1534,18 +1534,18 @@
   {
    "student": "FunnyGlupik",
    "assignment": "git-basics",
-   "score": 6,
+   "score": 10,
    "max_score": 10,
    "accepted_score": 6,
    "tasks": [
     "accepted",
     "accepted",
-    "failed"
+    "pending"
    ],
    "review": "changes_requested",
-   "fix_submitted": false,
+   "fix_submitted": true,
    "pr_url": "https://github.com/nsu-syspro/mpt-git-basics-FunnyGlupik/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-funnyglupik/releases/tag/submit%2F2026-10-17T05-25-08Z-2593553"
+   "release_url": "https://github.com/nsu-syspro/mpt-git-basics-funnyglupik/releases/tag/submit%2F2026-11-04T16-14-12Z-aa27b3d"
   },
   {
    "student": "Lavandamosh",
