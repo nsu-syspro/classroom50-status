@@ -2,7 +2,7 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-11-05T04:22:21Z",
+ "generated_at": "2026-11-05T04:33:08Z",
  "assignments": [
   {
    "slug": "command-line-basics",
@@ -400,15 +400,15 @@
    "assignment": "automation-basics",
    "score": 9,
    "max_score": 10,
-   "accepted_score": 6,
+   "accepted_score": 9,
    "tasks": [
     "accepted",
-    "pending",
+    "accepted",
     "accepted",
     "failed"
    ],
    "review": "changes_requested",
-   "fix_submitted": true,
+   "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-automation-basics-FunnyGlupik/pull/1",
    "release_url": "https://github.com/nsu-syspro/mpt-automation-basics-funnyglupik/releases/tag/submit%2F2026-11-04T15-26-11Z-0f41c5e"
   },
