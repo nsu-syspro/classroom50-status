@@ -2,7 +2,7 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-11-05T04:33:08Z",
+ "generated_at": "2026-11-05T17:06:51Z",
  "assignments": [
   {
    "slug": "command-line-basics",
@@ -1680,7 +1680,11 @@
    "review": "changes_requested",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-markup-basics-vebeta/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-vebeta/releases/tag/submit%2F2026-10-23T16-08-35Z-507e870"
+   "release_url": "https://github.com/nsu-syspro/mpt-markup-basics-vebeta/releases/tag/submit%2F2026-10-23T16-08-35Z-507e870",
+   "last_student_comment": {
+    "at": "2026-11-05T16:25:06Z",
+    "body": "<img width=\"1862\" height=\"947\" alt=\"!\" src=\"https://github.com/user-attachments/assets/aa04d36f-3802-49ce-a27d-c7d15299f"
+   }
   },
   {
    "student": "The-Durian-art",
