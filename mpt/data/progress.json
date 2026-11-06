@@ -2,14 +2,14 @@
  "schema": "nsu-syspro/progress/v1",
  "classroom": "mpt",
  "classroom_title": "Modern Programmer's Tools",
- "generated_at": "2026-11-06T16:23:37Z",
+ "generated_at": "2026-11-06T16:32:01Z",
  "assignments": [
   {
    "slug": "command-line-basics",
    "name": "Command-line basics",
    "due": "2026-09-11T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-06T16:23:18Z",
+   "collected_at": "2026-11-06T16:31:45Z",
    "submitted": 17
   },
   {
@@ -17,7 +17,7 @@
    "name": "Regex basics",
    "due": "2026-09-18T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-06T16:23:18Z",
+   "collected_at": "2026-11-06T16:31:45Z",
    "submitted": 17
   },
   {
@@ -25,7 +25,7 @@
    "name": "Encoding basics",
    "due": "2026-09-25T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-06T16:23:18Z",
+   "collected_at": "2026-11-06T16:31:45Z",
    "submitted": 17
   },
   {
@@ -33,7 +33,7 @@
    "name": "Bash basics",
    "due": "2026-10-02T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-06T16:23:18Z",
+   "collected_at": "2026-11-06T16:31:45Z",
    "submitted": 17
   },
   {
@@ -41,7 +41,7 @@
    "name": "Git basics",
    "due": "2026-10-09T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-06T16:23:18Z",
+   "collected_at": "2026-11-06T16:31:45Z",
    "submitted": 19
   },
   {
@@ -49,7 +49,7 @@
    "name": "Automation basics",
    "due": "2026-10-16T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-06T16:23:18Z",
+   "collected_at": "2026-11-06T16:31:45Z",
    "submitted": 16
   },
   {
@@ -57,7 +57,7 @@
    "name": "Markup basics",
    "due": "2026-10-23T16:59:00Z",
    "max_score": 10,
-   "collected_at": "2026-11-06T16:23:18Z",
+   "collected_at": "2026-11-06T16:31:45Z",
    "submitted": 17
   }
  ],
@@ -65,7 +65,7 @@
   {
    "username": "The-Durian-art",
    "display": "Артес Дэннис",
-   "zachet": "fail"
+   "zachet": "pass"
   },
   {
    "username": "Semex37",
@@ -1192,19 +1192,19 @@
   {
    "student": "The-Durian-art",
    "assignment": "encoding-basics",
-   "score": 2,
+   "score": 10,
    "max_score": 10,
-   "accepted_score": 2,
+   "accepted_score": 10,
    "tasks": [
-    "failed",
     "accepted",
-    "failed",
-    "failed"
+    "accepted",
+    "accepted",
+    "accepted"
    ],
    "review": "approved",
    "fix_submitted": false,
    "pr_url": "https://github.com/nsu-syspro/mpt-encoding-basics-The-Durian-art/pull/1",
-   "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-the-durian-art/releases/tag/submit%2F2026-11-06T15-24-18Z-b07d463"
+   "release_url": "https://github.com/nsu-syspro/mpt-encoding-basics-the-durian-art/releases/tag/submit%2F2026-11-06T16-20-12Z-a511909"
   },
   {
    "student": "vikxxie",
